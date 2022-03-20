@@ -2,7 +2,7 @@
   "name": "wod20update",
   "title": "Vampire 20th Anniversay Edition Update",
   "description": "Vampire 20th system for Foundry VTT! - testing - do not use",
-  "version": "1.4.33",
+  "version": "1.4.4",
   "minimumCoreVersion": "0.9.0",
   "compatibleCoreVersion": "0.9.0",
   "templateVersion": 3,
@@ -28,7 +28,7 @@
   "primaryTokenAttribute": "",
   "secondaryTokenAttribute": "",
   "url": "https://github.com/Salty-Byzrus/wod20update",
-  "manifest": "https://raw.githubusercontent.com/Salty-Byzrus/wod20update/main/system.json",
-  "download": "https://github.com/Salty-Byzrus/wod20update/archive/refs/heads/main.zip",
+  "manifest": "https://raw.githubusercontent.com/Salty-Byzrus/wod20update/1.4.4/system.json",
+  "download": "https://github.com/Salty-Byzrus/wod20update/archive/refs/tags/1.4.4.zip",
   "license": "LICENSE.txt"
 }
