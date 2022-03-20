@@ -58,7 +58,7 @@ export async  function rollDice(
         critSuccess += 2;
       } else
       if (dice.result===1) {
-        success -= 1;
+        success -= 2;
       }
       else {
         success++;
