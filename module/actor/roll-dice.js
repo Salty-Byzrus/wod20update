@@ -10,7 +10,15 @@ export async  function rollDice(
   specialty, 
   wound
   ) {
-  
+  console.log(
+    "numDice: " + numDice,
+    "actor" + actor,
+    "label" + label,
+    "difficulty" + difficulty,
+    "useHunger" + useHunger, 
+    "specialty" + specialty, 
+    "wound" + wound
+  )
   function healthModifier (wound) {
       // pick health value from ordered key (see health.html for the order)
       switch(true) {
