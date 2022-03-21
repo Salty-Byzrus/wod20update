@@ -49,20 +49,17 @@ export async  function rollDice(
       success++;
     }
     else
-    if (dice.result >= difficulty) {
-      if (specialty && dice.result === 10) {
-        critSuccess += 2;
-      } else
-      if (dice.result===1) {
-        success==success-1
-      }
-      else {
-        success++;
-      }
-
-    } else {
-      fail++;
-    }
+      if (dice.result >= difficulty)//if the roll succeds
+        if (specialty && dice.result === 10)
+          critSuccess += 2;
+        else
+          success++;
+      else // if the roll fails
+        fail++;
+        if(dice.result===1)
+        {
+          success--;
+        }
   });
 
   const totalSuccess = critSuccess + success;
