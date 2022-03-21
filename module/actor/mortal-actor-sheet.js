@@ -161,7 +161,9 @@ export class MortalActorSheet extends CoterieActorSheet {
                       <label>${game.i18n.localize("VTM5E.SelectAbility")}</label>
                       <select id="abilitySelect">${options}</select>
                     </div>`;
-    specialty =  `<input id="specialty" type="checkbox"> Specialty </input>`
+
+    specialty =  `<input id="specialty" type="checkbox"> Specialty </input>`;
+
     wounded = `<div class="form-group">
                 <label>${game.i18n.localize("VTM5E.SelectWound")}</label>
                 <select id="woundSelect">${healthOptions}</select>
@@ -204,6 +206,7 @@ export class MortalActorSheet extends CoterieActorSheet {
           const modifier = parseInt(html.find("#inputMod")[0].value || 0);
           const difficulty = parseInt(html.find("#inputDif")[0].value || 0);
           const specialty = parseInt(html.find("#specialty")[0]?.checked || false);
+          console.log("CB test here. Value is: " + specialty)
           const numDice = dataset.noability!=="true" ? abilityVal + parseInt(dataset.roll) + modifier : parseInt(dataset.roll) + modifier;
           
           rollDice(
