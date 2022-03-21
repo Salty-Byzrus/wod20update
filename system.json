@@ -1,12 +1,12 @@
 {
-  "name": "wod20update",
-  "title": "Vampire 20th Anniversay Edition Update",
-  "description": "Vampire 20th system for Foundry VTT! - testing - do not use",
+  "name": "wod20",
+  "title": "Vampire 20th Anniversay Edition",
+  "description": "Vampire 20th system for Foundry VTT!",
   "version": "1.5",
   "minimumCoreVersion": "0.9.0",
   "compatibleCoreVersion": "0.9.0",
   "templateVersion": 3,
-  "author": "Majid, Mal, Ray Ji, Salty Byzrus",
+  "author": "Majid, Mal, Ray Ji",
   "esmodules": ["module/main.js"],
   "styles": ["css/vtm5e.css"],
   "scripts": [],
@@ -27,8 +27,8 @@
   "gridUnits": "ft",
   "primaryTokenAttribute": "",
   "secondaryTokenAttribute": "",
-  "url": "https://github.com/Salty-Byzrus/wod20update",
-  "manifest": "https://raw.githubusercontent.com/Salty-Byzrus/wod20update/main/system.json",
-  "download": "https://github.com/Salty-Byzrus/wod20update/archive/refs/tags/1.5.zip",
+  "url": "https://github.com/Layman2501/wod20",
+  "manifest": "https://raw.githubusercontent.com/Layman2501/wod20/main/system.json",
+  "download": "https://github.com/Layman2501/wod20/archive/refs/heads/main.zip",
   "license": "LICENSE.txt"
 }

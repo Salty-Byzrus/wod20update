@@ -34,8 +34,6 @@ export async  function rollDice(
   let dice = chanceDie ? 1 : parseInt(numDice) + healthModifier(wound);
   const roll = new Roll(dice + "dvcs>11 + " + 0 + "dhcs>11", actor.data.data);
   await roll.evaluate();
-  
-   // Variable defining
   let difficultyResult = "<span></span>";
   let success = 0;
   let critSuccess = 0;
@@ -44,8 +42,6 @@ export async  function rollDice(
   let hungerFail = 0;
   let hungerCritFail = 0;
   let chanceDieSuccess = false; 
-  
-  // Defines the normal diceroll results
   roll.terms[0].results.forEach((dice) => {
     if (numDice+healthModifier(wound) <= 0 && dice.result===10)
     { 
