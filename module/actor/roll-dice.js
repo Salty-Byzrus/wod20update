@@ -66,7 +66,7 @@ export async  function rollDice(
         fail++;
         if(dice.result===1)
         {
-          success--;
+          success = max(success-1, 0);
         }
   });
 
