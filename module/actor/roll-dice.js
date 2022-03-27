@@ -66,11 +66,11 @@ export async  function rollDice(
         fail++;
         if(dice.result===1)
         {
-          success = max(success-1, 0);
+          success--;
         }
   });
 
-  const totalSuccess = critSuccess + success;
+  const totalSuccess = critSuccess + Math.max(success, 0);
 
   let successRoll = false;
   if (difficulty !== 0) {
