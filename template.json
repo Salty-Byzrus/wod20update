@@ -895,6 +895,12 @@
         "domitor": ""
       }
     },
+    "da-ghoul": {
+      "templates": ["vampire-da", "disciplines"],
+      "headers": {
+        "domitor": ""
+      }
+    },
     "mortal": {
       "templates": ["base"]
     },

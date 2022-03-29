@@ -11,6 +11,7 @@ import { rollDice } from "./actor/roll-dice.js";
 import { CoterieActorSheet } from "./actor/coterie-actor-sheet.js";
 import { MortalActorSheet } from "./actor/mortal-actor-sheet.js";
 import { GhoulActorSheet } from "./actor/ghoul-actor-sheet.js";
+import { GhoulDarkAgesSheet } from "./actor/ghoul-da-actor-sheet.js";
 import { VampireActorSheet } from "./actor/vampire-actor-sheet.js";
 import { VampireDarkAgesSheet } from "./actor/vampire-da-actor-sheet.js";
 
@@ -57,6 +58,11 @@ Hooks.once("init", async function () {
   Actors.registerSheet("vtm5e", VampireDarkAgesSheet, {
     label: "Vampire Dark Ages Sheet",
     types: ["vampire-da", "character"],
+    makeDefault: true,
+  });
+  Actors.registerSheet("vtm5e", GhoulDarkAgesSheet, {
+    label: "Ghoul Dark Ages Sheet",
+    types: ["da-ghoul"],
     makeDefault: true,
   });
   Actors.registerSheet("vtm5e", GhoulActorSheet, {
