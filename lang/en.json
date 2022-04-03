@@ -11,12 +11,12 @@
   "VTM5E.Domitor": "Domitor",
   
   "WOD20.Darkages": "Dark Ages",
-
+  "WOD20.Player": "Player",
 
   "VTM5E.Health": "Health",
   "VTM5E.Willpower": "Willpower",
   "VTM5E.WillpowerReroll": "Willpower Reroll",
-  "VTM5E.Exp": "Exp",
+  "VTM5E.Exp": "Experience",
   "VTM5E.Humanity": "Humanity",
   "VTM5E.Bloodpool": "Blood Pool",
   "VTM5E.Hunger": "Hunger",
@@ -56,8 +56,8 @@
   "VTM5E.Stamina": "Stamina",
   "VTM5E.Appearance": "Appearance",
   "VTM5E.Perception": "Perception",
-  "VTM5E.Conscience/Conviction": "Conscience/Conviction",
-  "VTM5E.Self-Control/Instinct": "Self-Control/Instinct",
+  "VTM5E.Conscience/Conviction": "Conscience/ Conviction",
+  "VTM5E.Self-Control/Instinct": "Self-Control/ Instinct",
   "VTM5E.Courage": "Courage",
   "VTM5E.Skills": "Abilities",
   "VTM5E.Athletics": "Athletics",
@@ -209,7 +209,7 @@
   "VTM5E.Discipline": "Discipline",
   "VTM5E.System": "System",
   "VTM5E.Rollable": "Rollable",
-  "VTM5E.UseSkill": "Use Skills",
+  "VTM5E.UseSkill": "Use Abilities",
   "VTM5E.FeatureType": "Feature Type",
 
   "VTM5E.RollingWillpower": "Rolling Willpower",
@@ -226,7 +226,7 @@
   "VTM5E.Difficulty": "Difficulty?",
   "VTM5E.Rolling": "Rolling",
   "VTM5E.Cancel": "Cancel",
-  "VTM5E.SelectAbility": "Select Ability",
+  "VTM5E.SelectAbility": "Select Attribute",
   "VTM5E.Weapon" : "Weapon/Attack",
   "VTM5E.Diff" : "Diff", 
   "VTM5E.Damage": "Damage", 

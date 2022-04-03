@@ -11,4 +11,14 @@
             {{/numLoop}}
         </div>
     </div>
+    <div class="flexrow">
+        <!--This is incorrect need to change value per generation-->
+        {{setVar "generation" data.data.headers.generation}}
+        {{#le generation 7}}
+        {{setVar "turnblood" 3}}
+        {{else}}
+        {{setVar "turnblood" 3}}
+        {{/le}}
+        <label>Blood per Turn: {{turnblood}}</label>
+    </div>
 </div>
