@@ -11,7 +11,7 @@ export const preloadHandlebarsTemplates = async function () {
     "systems/wod20/templates/actor/parts/biography.html",
     "systems/wod20/templates/actor/parts/disciplines.html",
     "systems/wod20/templates/actor/parts/exp.html",
-    "systems/wod20/templates/actor/parts/features.html",
+    "systems/wod20/templates/actor/parts/advantages.hbs",
     "systems/wod20/templates/actor/parts/frenzy.html",
     "systems/wod20/templates/actor/parts/health.html",
     "systems/wod20/templates/actor/parts/humanity.html",

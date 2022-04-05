@@ -1,38 +1,37 @@
 <div class="tab" data-group="primary" data-tab="description">
     {{#if isCharacter}}   
-        <!--
-    <div class="resource flexrow grid grid-3col">
-        <div class="flex-group-center">
-            <label class="resource-label">{{localize "VTM5E.Concept"}}</label>
-            <input type="text" name="data.headers.concept" value="{{data.data.headers.concept}}" />
+    <div class="flex-group-center">
+        <div class="resource flexrow grid grid-3col">
+            <div>
+                <label class="resource-label">{{localize "WOD20.Player"}}</label>
+                <input type="text" name="data.headers.player" value="{{data.data.headers.player}}" />
+            </div>
+            <div>
+                <label class="resource-label">{{localize "VTM5E.Ambition"}}</label>
+                <input type="text" name="data.headers.ambition" value="{{data.data.headers.ambition}}" />
+            </div>
+            <div>
+                <label class="resource-label">{{localize "VTM5E.Concept"}}</label>
+                <input type="text" name="data.headers.concept" value="{{data.data.headers.concept}}" />
+            </div>
         </div>
-        <div class="flex-group-center">
-            <label class="resource-label">{{localize "VTM5E.Chronicle"}}</label>
-            <input type="text" name="data.headers.chronicle" value="{{data.data.headers.chronicle}}" />
-        </div>
-        <div class="flex-group-center">
-            <label class="resource-label">{{localize "VTM5E.Ambition"}}</label>
-            <input type="text" name="data.headers.ambition" value="{{data.data.headers.ambition}}" />
+            
+        <div class="resource flexrow grid grid-3col">
+            <div>
+                <label class="resource-label">{{localize "VTM5E.Chronicle"}}</label>
+                <input type="text" name="data.headers.chronicle" value="{{data.data.headers.chronicle}}" />
+            </div>
+            <div>
+                <label class="resource-label">{{localize "VTM5E.Desire"}}</label>
+                <input type="text" name="data.headers.desire" value="{{data.data.headers.desire}}" />
+            </div>
+            <div>
+                <label class="resource-label">{{localize "VTM5E.Sire"}}</label>
+                <input type="text" name="data.headers.sire" value="{{data.data.headers.sire}}" />
+            </div>
         </div>
     </div>
-
-    <div class="resource flexrow grid grid-3col">
-        <div class="flex-group-center">
-            <label class="resource-label">{{localize "VTM5E.Desire"}}</label>
-            <input type="text" name="data.headers.desire" value="{{data.data.headers.desire}}" />
-        </div>
-        {{#if data.data.clan.value}}
-        <div class="flex-group-center">
-            <label class="resource-label">{{localize "VTM5E.Sire"}}</label>
-            <input type="text" name="data.headers.sire" value="{{data.data.headers.sire}}" />
-        </div>
-        <div class="flex-group-center">
-            <label class="resource-label">{{localize "VTM5E.Generation"}}</label>
-            <input type="text" name="data.headers.generation" value="{{data.data.headers.generation}}" />
-        </div>
-        {{/if}}
-        
-    </div> 
+    <!-- 
     <div class="resource flexrow grid grid-3col">
         <div class="flex-group-center">
             <label class="resource-label">{{localize "VTM5E.ChronicleTenets"}}</label>
@@ -49,18 +48,54 @@
         </div>
         {{/if}}
     </div>-->
-    <div class="resource flexrow grid grid-3col">
-        <div class="flex-group-center">
-            <label class="resource-label">{{localize "VTM5E.EyeColour"}}</label>
-            <input type="text" name="data.headers.eyecolour" value="{{data.data.headers.eyecolour}}" />
+    <div class="flex-group-center">
+        <div class="resource flexrow grid grid-6col">
+            <div>
+                <label class="characteristics-label">{{localize "VTM5E.Age"}}</label>
+                <input type="text" name="data.headers.age" value="{{data.data.headers.age}}" />
+            </div>
+            <div>
+                <label class="characteristics-label">{{localize "VTM5E.ApparentAge"}}</label>
+                <input type="text" name="data.headers.apparent_age" value="{{data.data.headers.apparent_age}}" />
+            </div>
+            <div>
+                <label class="characteristics-label">{{localize "VTM5E.DOB"}}</label>
+                <input type="text" name="data.headers.dob" value="{{data.data.headers.dob}}" />
+            </div>
+            <div>
+                <label class="characteristics-label">{{localize "VTM5E.RIP"}}</label>
+                <input type="text" name="data.headers.rip" value="{{data.data.headers.rip}}" />
+            </div>
+            <div>
+                <label class="characteristics-label">{{localize "VTM5E.EyeColour"}}</label>
+                <input type="text" name="data.headers.eyecolour" value="{{data.data.headers.eyecolour}}" />
+            </div>
+            <div>
+                <label class="characteristics-label">{{localize "VTM5E.HairColour"}}</label>
+                <input type="text" name="data.headers.haircolour" value="{{data.data.headers.haircolour}}" />
+            </div>
         </div>
-        <div class="flex-group-center">
-            <label class="resource-label">{{localize "VTM5E.HairColour"}}</label>
-            <input type="text" name="data.headers.haircolour" value="{{data.data.headers.haircolour}}" />
-        </div>
-        <div class="flex-group-center">
-            <label class="resource-label">{{localize "VTM5E.Height"}}</label>
-            <input type="text" name="data.headers.height" value="{{data.data.headers.height}}" />
+        <div class="resource flexrow grid grid-6col">
+            <div>
+                <label class="characteristics-label">{{localize "VTM5E.Race"}}</label>
+                <input type="text" name="data.headers.race" value="{{data.data.headers.race}}" />
+            </div>
+            <div>
+                <label class="characteristics-label">{{localize "VTM5E.Nationality"}}</label>
+                <input type="text" name="data.headers.nationality" value="{{data.data.headers.nationality}}" />
+            </div>
+            <div>
+                <label class="characteristics-label">{{localize "VTM5E.Height"}}</label>
+                <input type="text" name="data.headers.height" value="{{data.data.headers.height}}" />
+            </div>
+            <div>
+                <label class="characteristics-label">{{localize "VTM5E.Weight"}}</label>
+                <input type="text" name="data.headers.weight" value="{{data.data.headers.weight}}" />
+            </div>
+            <div>
+                <label class="characteristics-label">{{localize "VTM5E.Sex"}}</label>
+                <input type="text" name="data.headers.sex" value="{{data.data.headers.sex}}" />
+            </div>
         </div>
     </div>
     {{/if}}

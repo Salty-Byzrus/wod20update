@@ -58,8 +58,8 @@
 }
 
 .grid-6col {
-  grid-column: span 5 / span 5;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-column: span 6 / span 6;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .grid-7col {
@@ -105,6 +105,8 @@
   padding: 5px;
   border: 1px solid #790813;
   border-radius: 5px;
+  align-self: stretch;
+  margin-bottom: 5px;
 }
 
 .flex-group-left {
@@ -140,8 +142,17 @@
   -ms-flex-pack: left;
   justify-content: left;
   text-align: left;
-  font-size: 22px;
 }
+
+.flex-center-text-left {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: left;
+  }
 
 .flex-between {
   -webkit-box-pack: justify;
@@ -149,8 +160,12 @@
   justify-content: space-between;
 }
 
-
 /* New Styles */
+.vtm5e {
+
+}
+
+
 .vtm5e .window-content {
   background: #ffffff;
   font-family: "cormorantLight", sans-serif;
@@ -182,9 +197,11 @@
     font-weight: bold;
     font-size: 18px;
 }
-.vtm5e .resource-label {
+
+.vtm5e .characteristics-label {
   font-weight: bold;
   justify-content: center;
+  font-size: 14px
 }
 
 /*Text Heading*/
@@ -192,20 +209,26 @@
   text-transform: initial;
   font-size: 18px;
 }
+.pad-bottom {
+    padding-bottom: 5px;
+}
+.pad-top {
+    padding-top: 5px;
+}
 /*Text Heading for header fields*/
 
 /*Attribute labels eg. Alertness, Animal Ken etc. etc.*/
 .vtm5e .window-content .abilities .ability .resource-label {
   font-weight: bold;
   font-size: 16px;
-  padding-top: 2px; /*hacky fix to text not being inline with dots*/
+  /*padding-top: 2px; /*hacky fix to text not being inline with dots*/
 }
 
 /*Attribute labels eg. Strength, Charisma etc.*/
 .vtm5e .window-content .attributes .attribute .resource-label {
     font-weight: bold;
     font-size: 16px;
-    padding-top: 2px; /*hacky fix to text not being inline with dots*/
+    /*padding-top: 2px; /*hacky fix to text not being inline with dots*/
   }
 
 .vtm5e .window-content nav.sheet-tabs {
@@ -274,20 +297,80 @@
   justify-content: flex-start;
 }
 
-.header-section-2col {
+.vtm5e .header-section{
+    display:felx
+}
+.vtm5e .header-section-2col {
   display: grid;
   grid-column: span 2 / span 2;
   grid-template-columns: 200px auto;
   gap: 10px;
   margin: 0px 0;
   padding: 0;
+  height:100%;
 }
+
+
+
+
+
+.item1 { grid-area: health; }
+.item2 { grid-area: humanity; }
+.item3 { grid-area: willpower; }
+.item4 { grid-area: bloodpool; }
+.item5 { grid-area: experience; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'health willpower humanity'
+        'health bloodpool experience';
+    gap: 5px;
+    background-color:;
+    padding: 0;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 4fr 3fr 3fr;
+    height: 80%;
+    max-width:100%
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.flex-column {
+    padding: 5px;
+    border: 1px solid #790813;
+    border-radius: 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.flex-group-area .top{
+    align-items:flex-start;
+}
+.middle{
+    margin-top:0px;
+}
+.flex-group-area .bottom{
+    align-items:flex-end;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    justify-content: center;
+}
+
 
 .vtm5e .coterie-sheet .sheet-header,
 .vtm5e .mortal-sheet .sheet-header,
 .vtm5e .ghoul-sheet .sheet-header {
   flex: 0 0 155px;
 }
+
+
+
 
 /*Area of the Profile image and lock button*/
 .vtm5e .header-section-2col .profile-img-zone {
@@ -306,6 +389,7 @@
   font-weight: bold;
   border: 1px solid #000000;
 }
+/*Frenzy and rotschreck buttons*/
 .vtm5e .header-section-2col .button-section {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -332,7 +416,11 @@
   font-size: 22px;
   font-weight: bold;
   text-decoration: none;
+  margin-bottom: 5px;
 }
+
+
+
 
 .vtm5e .header-section-2col label {
     display: block;
@@ -342,7 +430,6 @@
     font-weight: bold;
     color: #790813;
   }
-
 .vtm5e .header-section-2col input {
   width: 100%;
   height: 30px;
@@ -350,7 +437,7 @@
   font-size: 18px;
   text-align: left;
 }
-.vtm5e .header-section-2col .grid-4col input {
+.vtm5e .header-section-2col .grid-container input {
   width: 100%;
   height: 30px;
   margin: 20;
@@ -585,6 +672,12 @@
 /*moves the ability dots down - why???*/
 .vtm5e .flex-group-center:not(.flexrow) .resource-value,
 .vtm5e .flex-group-center:not(.flexrow) .resource-counter {
+  margin-top: 0px;
+}
+
+/*moves the ability dots down - why???*/
+.vtm5e .flex-group-center:not(.flexrow) .resource-value,
+.vtm5e .flex-group-center:not(.flexrow) .resource-counter-health {
   margin-top: 0px;
 }
 

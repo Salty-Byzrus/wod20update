@@ -22,7 +22,15 @@
                     "haircolour": "",
                     "height": "",
                     "touchstones": "",
-                    "tenets": ""
+                    "tenets": "",
+                    "age": "",
+                    "apparent_age":"",
+                    "dob":"",
+                    "rip":"",
+                    "race":"",
+                    "nationality":"",
+                    "weight":"",
+                    "sex":""
                 },
                 "exp": {
                     "value": 0,

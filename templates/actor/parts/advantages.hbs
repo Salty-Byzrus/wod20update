@@ -2,7 +2,7 @@
     {{#if isCharacter}}
     <label class="resource-label flex-center">{{localize "VTM5E.Boons"}}</label>
     <ol class="items-list flex-left">
-        <li class="item flexrow item-header">
+        <li class="item flexrow item-header resource-label">
             <div class="item-name">{{localize "VTM5E.Name"}}</div>
             <div class="item-image"></div>
             <div class="item-name">{{localize "VTM5E.Type"}}</div>
@@ -39,12 +39,12 @@
     {{/if}}
     <label class="resource-label flex-center">{{localize "VTM5E.Features"}}</label>
     <ol class="items-list">
-        <li class="item flexrow item-header">
+        <li class="item flexrow item-header resource-label">
             <div class="item-name-header">{{localize "VTM5E.Name"}}</div>
             <div class="item-name-header">{{localize "VTM5E.Points"}}</div>
         </li>
         {{#each actor.features as |feature key|}}
-        <li class="flexrow item-header">
+        <li class="flexrow item-header resource-label">
             <div class="item-name">{{localize (generateFeatureLabel key)}}</div>
             <div class="item-controls">
                 <a class="item-control item-create" title="{{localize 'VTM5E.AddFeat'}}" data-type="feature"

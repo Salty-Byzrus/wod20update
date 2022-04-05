@@ -12,6 +12,8 @@
   
   "WOD20.Darkages": "Dark Ages",
   "WOD20.Player": "Player",
+  "WOD20.Spent": "Spent",
+  "WOD20.Total": "Total",
 
   "VTM5E.Health": "Health",
   "VTM5E.Willpower": "Willpower",
@@ -32,7 +34,7 @@
 
   "VTM5E.Stats": "Stats",
   "VTM5E.Disciplines": "Disciplines",
-  "VTM5E.Features": "Features",
+  "VTM5E.Features": "Advantages",
   "VTM5E.Blood": "Blood",
   "VTM5E.Description": "Description",  
   "VTM5E.Equipment": "Equipment",
@@ -205,6 +207,15 @@
   "VTM5E.Height": "Height",
   "VTM5E.Biography": "Biography",
   "VTM5E.History": "History",
+
+  "VTM5E.Age": "Age",
+  "VTM5E.ApparentAge": "Apparent Age",
+  "VTM5E.DOB": "DOB",
+  "VTM5E.RIP": "RIP",
+  "VTM5E.Race": "Race",
+  "VTM5E.Nationality": "Nationality",
+  "VTM5E.Weight": "Weight",
+  "VTM5E.Sex": "Sex",
 
   "VTM5E.Discipline": "Discipline",
   "VTM5E.System": "System",
