@@ -1,11 +1,10 @@
 <div class="tab features" data-group="primary" data-tab="features">
     {{#if isCharacter}}
     <label class="resource-label flex-center">{{localize "VTM5E.Boons"}}</label>
-    <ol class="items-list flex-left">
-        <li class="item flexrow item-header resource-label">
+    <ol class="items-list">
+        <li class="item flexrow-between item-header resource-label">
             <div class="item-name">{{localize "VTM5E.Name"}}</div>
-            <div class="item-image"></div>
-            <div class="item-name">{{localize "VTM5E.Type"}}</div>
+            <div class="item-name flex-center">{{localize "VTM5E.Type"}}</div>
             <div class="item-controls">
                 <a class="item-control item-create" title="{{localize 'VTM5E.AddItem'}}"
                     data-type="boon"><i class="fas fa-plus"></i> {{localize "VTM5E.AddItem"}}
@@ -15,10 +14,12 @@
         {{#each actor.boons as |item id|}}
         <li class="item flexcol" data-item-id="{{item._id}}">
             <div class="flexrow">
-                <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"
-                    alt="{{item.name}}" />
+                <div class="flexrow">
+                    <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"
+                        alt="{{item.name}}" />
+                    </div>
+                    <h4 class="item-name collapsible">{{item.name}}</h4>
                 </div>
-                <h4 class="item-name collapsible">{{item.name}}</h4>
                 <h4 class="item-name">{{item.data.boontype}}</h4>
                 <div class="item-controls">
                     <a class="item-control item-chat" title="{{localize 'VTM5E.ShowToChat'}}"><i

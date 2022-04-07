@@ -1,61 +1,62 @@
-<form
-  class="{{cssClass}} flexcol {{#if locked}}locked{{/if}} vampire-sheet"
+<form class="{{cssClass}} flexcol {{#if locked}}locked{{/if}} vampire-sheet"
   autocomplete="off"
 >
     {{!-- Vampire Sheet Header --}}
-    <header class="header-section-2col">
-        {{> "systems/wod20/templates/actor/parts/profile-img.html"}}
-        <div class="flex-group-center">
-            <div class="grid grid-3col flex-left">
-                <div>
-                    <label>{{localize "VTM5E.Name"}}</label>
-                    <input type="text" name="name" value="{{actor.name}}" />
+    <header class="header-section">
+        <header class="header-section-2col">
+            {{> "systems/wod20/templates/actor/parts/profile-img.html"}}
+            <div class="flex-group-center">
+                <div class="grid grid-3col flex-left">
+                    <div>
+                        <label>{{localize "VTM5E.Name"}}</label>
+                        <input type="text" name="name" value="{{actor.name}}" />
+                    </div>
+                    <div>
+                        <label>{{localize "VTM5E.Generation"}}</label>
+                        <input type="text" name="data.headers.generation" value="{{data.data.headers.generation}}" />
+                    </div>
+                    <div>
+                        <label>{{localize "VTM5E.Clan"}}</label>
+                        <input type="text" name="data.clan.value" value="{{data.data.clan.value}}" />
+                    </div>
                 </div>
-                <div>
-                    <label>{{localize "VTM5E.Generation"}}</label>
-                    <input type="text" name="data.headers.generation" value="{{data.data.headers.generation}}" />
-                </div>
-                <div>
-                    <label>{{localize "VTM5E.Clan"}}</label>
-                    <input type="text" name="data.clan.value" value="{{data.data.clan.value}}" />
-                </div>
-            </div>
 
-            <div class="grid-container">
-                <div class="item1">{{>"systems/wod20/templates/actor/parts/health.html"}}</div>
-                <div class="item2">{{>"systems/wod20/templates/actor/parts/humanity.html"}}</div>
-                <div class="item3">{{>"systems/wod20/templates/actor/parts/willpower.html"}}</div>
-                <div class="item4">{{>"systems/wod20/templates/actor/parts/bloodpool.html"}}</div>
-                <div class="item5">{{>"systems/wod20/templates/actor/parts/exp.html"}}</div>
-            </div> 
-        </div>
+                <div class="grid-container">
+                    <div class="item1">{{>"systems/wod20/templates/actor/parts/health.html"}}</div>
+                    <div class="item2">{{>"systems/wod20/templates/actor/parts/humanity.html"}}</div>
+                    <div class="item3">{{>"systems/wod20/templates/actor/parts/willpower.html"}}</div>
+                    <div class="item4">{{>"systems/wod20/templates/actor/parts/bloodpool.html"}}</div>
+                    <div class="item5">{{>"systems/wod20/templates/actor/parts/exp.html"}}</div>
+                </div> 
+            </div>
+        </header>
     </header>
 
-  {{!-- Vampire Sheet Tab Navigation --}}
-  <nav class="sheet-tabs tabs" data-group="primary">
-    <a class="item" data-tab="stats">{{localize "VTM5E.Stats"}}</a>
-    <a class="item" data-tab="disciplines">{{localize "VTM5E.Disciplines"}}</a>
-    <a class="item" data-tab="features">{{localize "VTM5E.Features"}}</a>
+    {{!-- Vampire Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="stats">{{localize "VTM5E.Stats"}}</a>
+        <a class="item" data-tab="disciplines">{{localize "VTM5E.Disciplines"}}</a>
+        <a class="item" data-tab="features">{{localize "VTM5E.Features"}}</a>
 
-    <a class="item" data-tab="description">{{localize "VTM5E.Description"}}</a>
-    <a class="item" data-tab="combat">{{localize "VTM5E.Combat"}}</a>
-    <a class="item" data-tab="other">{{localize "VTM5E.Other"}}</a>
-  </nav>
+        <a class="item" data-tab="description">{{localize "VTM5E.Description"}}</a>
+        <a class="item" data-tab="combat">{{localize "VTM5E.Combat"}}</a>
+        <a class="item" data-tab="other">{{localize "VTM5E.Other"}}</a>
+    </nav>
 
-  {{!-- Vampire Sheet Body --}}
-  <section class="sheet-body">
-    {{!-- Stats Tab --}} 
-    {{>"systems/wod20/templates/actor/parts/stats.html"}} 
-    {{!-- Owned Powers Tab --}} 
-    {{> "systems/wod20/templates/actor/parts/disciplines.html"}}
-    {{!-- Owned Features Tab --}} 
-    {{>"systems/wod20/templates/actor/parts/advantages.hbs"}} 
-    {{!-- Blood Tab --}}
-    {{!-- Biography Tab --}} 
-    {{> "systems/wod20/templates/actor/parts/biography.html"}}
-    {{! -- Combat --}} 
-    {{> "systems/wod20/templates/actor/parts/combat.html"}}
-     {{!-- Other Tab --}} 
-     {{> "systems/wod20/templates/actor/parts/other.html"}}
-  </section>
+    {{!-- Vampire Sheet Body --}}
+    <section class="sheet-body">
+        {{!-- Stats Tab --}} 
+        {{>"systems/wod20/templates/actor/parts/stats.html"}} 
+        {{!-- Owned Powers Tab --}} 
+        {{> "systems/wod20/templates/actor/parts/disciplines.html"}}
+        {{!-- Owned Features Tab --}} 
+        {{>"systems/wod20/templates/actor/parts/advantages.hbs"}} 
+        {{!-- Blood Tab --}}
+        {{!-- Biography Tab --}} 
+        {{> "systems/wod20/templates/actor/parts/biography.html"}}
+        {{! -- Combat --}} 
+        {{> "systems/wod20/templates/actor/parts/combat.html"}}
+        {{!-- Other Tab --}} 
+        {{> "systems/wod20/templates/actor/parts/other.html"}}
+    </section>
 </form>

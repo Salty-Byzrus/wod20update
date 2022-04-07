@@ -31,35 +31,39 @@
   cursor: pointer;
 }
 
-.grid,
+.grid {
+    display: grid;
+    grid-column: span 2 / span 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 5px 0;
+    padding: 0;
+}
 .grid-2col {
-  display: grid;
-  grid-column: span 2 / span 2;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-  margin: 5px 0;
-  padding: 0;
-}
+    display: grid;
+    grid-column: span 2 / span 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
+}
 .grid-3col {
-  grid-column: span 3 / span 3;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: grid;
+    grid-column: span 3 / span 3;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
-
 .grid-4col {
-  grid-column: span 4 / span 4;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-top: 10px;
+    display: grid;
+    grid-column: span 4 / span 4;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: 10px;
 }
-
 .grid-5col {
-  grid-column: span 5 / span 5;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+grid-column: span 5 / span 5;
+grid-template-columns: repeat(5, minmax(0, 1fr));
 }
-
 .grid-6col {
-  grid-column: span 6 / span 6;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+    display: grid;
+    grid-column: span 6 / span 6;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .grid-7col {
@@ -107,6 +111,7 @@
   border-radius: 5px;
   align-self: stretch;
   margin-bottom: 5px;
+  margin
 }
 
 .flex-group-left {
@@ -143,6 +148,15 @@
   justify-content: left;
   text-align: left;
 }
+.flex-right {
+  -webkit-box-align: right;
+  -ms-flex-align: right;
+  align-items: right;
+  -webkit-box-pack: right;
+  -ms-flex-pack: right;
+  justify-content: right;
+  text-align: right;
+}
 
 .flex-center-text-left {
     -webkit-box-align: center;
@@ -152,14 +166,56 @@
     -ms-flex-pack: center;
     justify-content: center;
     text-align: left;
-  }
+}
 
 .flex-between {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  align-items: space-between;
 }
 
+.flexrow-between {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.flexrow-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flexrow-evenly {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.flexrow-around {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.gap-columns-5{
+    gap: 5%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+.dots-right {
+  -webkit-box-align: right;
+  -ms-flex-align: right;
+  align-items: right;
+  -webkit-box-pack: right;
+  -ms-flex-pack: right;
+  justify-content: right;
+  text-align: right;
+  justify-items: left;
+  align-items: center;
+  margin-top: 10px;
+}
 /* New Styles */
 .vtm5e {
 
@@ -242,6 +298,7 @@
 .vtm5e .window-content nav.sheet-tabs a.item.active {
   background: #faf5ed;
   text-decoration: none;
+  height: 100%;
 }
 
 .vtm5e .resource .resource-control:hover,
@@ -296,30 +353,34 @@
   -ms-flex-pack: start;
   justify-content: flex-start;
 }
-
-.vtm5e .header-section{
-    display:felx
+/*Fix the height of the header section*/
+.header-section{
+    display: flex;
+    flex:0 0 250px
 }
-.vtm5e .header-section-2col {
+.header-section-2col {
   display: grid;
   grid-column: span 2 / span 2;
   grid-template-columns: 200px auto;
-  gap: 10px;
+  gap: 5px;
   margin: 0px 0;
   padding: 0;
   height:100%;
 }
-
-
-
-
-
+.header-section-3col {
+    display: grid;
+    grid-column: span 3 / span 3;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin: 5px 0;
+    padding: 0;
+    height: 20%;
+}
 .item1 { grid-area: health; }
 .item2 { grid-area: humanity; }
 .item3 { grid-area: willpower; }
 .item4 { grid-area: bloodpool; }
 .item5 { grid-area: experience; }
-
 .grid-container {
     display: grid;
     grid-template-areas:
@@ -333,10 +394,6 @@
     height: 80%;
     max-width:100%
 }
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
 .flex-column {
     padding: 5px;
     border: 1px solid #790813;
@@ -345,21 +402,11 @@
     display: flex;
     flex-direction: column;
 }
-.flex-group-area .top{
-    align-items:flex-start;
-}
 .middle{
     margin-top:0px;
 }
 .flex-group-area .bottom{
     align-items:flex-end;
-}
-
-.footer{
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    justify-content: center;
 }
 
 
@@ -577,7 +624,7 @@
   cursor: pointer;
 }
 
-/* Sets colour of stat dot*/
+/* Fills in dot*/
 .vtm5e .resource-value .resource-value-step.active {
   background-color: #000000;
 }
@@ -594,6 +641,7 @@
   background-color: #790813;
 }
 
+/*delete filled stat dots dot. Needed to remove first fille dot in row*/
 .vtm5e .resource-value .resource-value-empty {
   height: 14px;
   width: 14px;
