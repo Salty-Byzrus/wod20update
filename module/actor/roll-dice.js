@@ -12,12 +12,12 @@ export async  function rollDice(
   ) {
   console.log(
     "numDice: " + numDice,
-    "actor" + actor,
-    "label" + label,
-    "difficulty" + difficulty,
-    "useHunger" + useHunger, 
-    "specialty" + specialty, 
-    "wound" + wound
+    "actor: " + actor,
+    "label: " + label,
+    "difficulty: " + difficulty,
+    "useHunger: " + useHunger, 
+    "specialty: " + specialty, 
+    "wound: " + wound
   )
   function healthModifier (wound) {
       // pick health value from ordered key (see health.html for the order)
@@ -110,6 +110,7 @@ export async  function rollDice(
   //}
   if ( chanceDie )  {
     label = label + 
+    // needs translation
     `<p class="roll-content result-bestial"> Chance die </p>`;
   }
   label =
