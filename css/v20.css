@@ -273,19 +273,12 @@ grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 /*Text Heading for header fields*/
 
-/*Attribute labels eg. Alertness, Animal Ken etc. etc.*/
-.vtm5e .window-content .abilities .ability .resource-label {
+/*Attribute labels eg. Strength, Alertness, Animal Ken etc. etc.*/
+.vtm5e .window-content .stat-label {
   font-weight: bold;
   font-size: 16px;
   /*padding-top: 2px; /*hacky fix to text not being inline with dots*/
 }
-
-/*Attribute labels eg. Strength, Charisma etc.*/
-.vtm5e .window-content .attributes .attribute .resource-label {
-    font-weight: bold;
-    font-size: 16px;
-    /*padding-top: 2px; /*hacky fix to text not being inline with dots*/
-  }
 
 .vtm5e .window-content nav.sheet-tabs {
   background: #e6ded0;

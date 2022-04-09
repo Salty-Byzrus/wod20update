@@ -21,8 +21,6 @@
                     "eyecolour": "",
                     "haircolour": "",
                     "height": "",
-                    "touchstones": "",
-                    "tenets": "",
                     "age": "",
                     "apparent_age":"",
                     "dob":"",
@@ -338,9 +336,7 @@
                     "desire": "",
                     "eyecolour": "",
                     "haircolour": "",
-                    "height": "",
-                    "touchstones": "",
-                    "tenets": ""
+                    "height": ""
                 },
                 "exp": {
                     "value": 0,
@@ -837,10 +833,8 @@
                 "disciplines"
             ],
             "headers": {
-                "predator": "",
                 "sire": "",
-                "generation": "",
-                "bane": ""
+                "generation": ""
             },
             "blood": {
                 "potency": 0,
@@ -881,10 +875,8 @@
                 "vampire-da"
             ],
             "headers": {
-                "predator": "",
                 "sire": "",
-                "generation": "",
-                "bane": ""
+                "generation": ""
             },
             "blood": {
                 "potency": 0,
