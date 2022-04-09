@@ -1,4 +1,4 @@
-<div class="flex-column humanity flex-between">
+<div class="flex-column flex-between">
     <div>
         <label for="data.data.humanityLabel.value" class="resource-label" 
         data-label="{{localize 'VTM5E.RollingRemorse'}}"
@@ -8,9 +8,9 @@
     </div>
     <div>
         <div class="resource-content flexrow flex-center flex-between">
-            <div class="resource-counter" data-states="-:value,/:stains" data-value="{{data.data.humanity.value}}" data-stains="{{data.data.humanity.stains}}"  data-name="data.humanity">
+            <div class="resource-counter" data-states="-:value" data-max="{{data.data.humanity.max}}" data-value="{{data.data.humanity.value}}"  data-name="data.humanity">
                 {{#numLoop 10}}
-                <span class="resource-counter-step" data-index="{{this}}" data-state=""></span>
+                <span class="resource-counter-step makeinlineblock" data-index="{{this}}" data-state=""></span>
                 {{/numLoop}}
             </div>
         </div>

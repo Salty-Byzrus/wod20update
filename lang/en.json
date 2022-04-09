@@ -1,7 +1,6 @@
 {
   "VTM5E.Name": "Name",
   "VTM5E.Clan": "Clan",
-  "VTM5E.Predator": "Predator",
 
   "VTM5E.Vampire": "Vampire",
   "VTM5E.VampireDarkAges": "Vampire Dark Ages",
@@ -14,6 +13,17 @@
   "WOD20.Player": "Player",
   "WOD20.Spent": "Spent",
   "WOD20.Total": "Total",
+  "WOD20.Healthy": "Healthy",
+  "WOD20.Bruised": "Bruised",
+  "WOD20.Hurt": "Hurt",
+  "WOD20.Injured": "Injured",
+  "WOD20.Wounded": "Wounded",
+  "WOD20.Mauled": "Mauled",
+  "WOD20.Crippled": "Crippled",
+  "WOD20.Incapacitated": "Incapacitated",
+  "WOD20.Torpor": "Torpor",
+  "WOD20.FinalDeath": "Final Death",
+
 
   "VTM5E.Health": "Health",
   "VTM5E.Willpower": "Willpower",
@@ -195,9 +205,9 @@
 
   "VTM5E.Concept": "Concept",
   "VTM5E.Chronicle": "Chronicle",
-  "VTM5E.Ambition": "Nature",
+  "VTM5E.Nature": "Nature",
   "VTM5E.Sire": "Sire",
-  "VTM5E.Desire": "Demeanor",
+  "VTM5E.Demeanor": "Demeanor",
   "VTM5E.Generation": "Generation",
   "VTM5E.ChronicleTenets": "Chronicle Tenets",
   "VTM5E.TouchstonesAndConvictions": "Touchstones & Convictions",

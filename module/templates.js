@@ -13,7 +13,7 @@ export const preloadHandlebarsTemplates = async function () {
     "systems/wod20/templates/actor/parts/exp.html",
     "systems/wod20/templates/actor/parts/advantages.hbs",
     "systems/wod20/templates/actor/parts/frenzy.html",
-    "systems/wod20/templates/actor/parts/health.html",
+    "systems/wod20/templates/actor/parts/health.hbs",
     "systems/wod20/templates/actor/parts/humanity.html",
     "systems/wod20/templates/actor/parts/bloodpool.html",
     "systems/wod20/templates/actor/parts/profile-img.html",

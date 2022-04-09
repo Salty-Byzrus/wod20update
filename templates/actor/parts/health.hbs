@@ -1,0 +1,35 @@
+<div class="flex-column">
+    <label for="data.data.health" class="resource-label">{{localize "VTM5E.Health"}}</label>
+
+    <!--are resource-counter flexrow flex-center flex-between actually in use here?-->
+    <div class="">
+        <div 
+            class="resource-counter health" 
+            data-states="/:superficial,x:aggravated,-:lethal"  
+            data-max="{{data.data.health.max}}" 
+            data-lethal="{{data.data.health.lethal}}" 
+            data-superficial="{{data.data.health.superficial}}" 
+            data-aggravated="{{data.data.health.aggravated}}" 
+            data-name="data.health"
+            >
+            {{#numLoop data.data.health.max}}
+            <div class="resource-counter-step flex" data-index="{{this}}" data-state=""></div>
+            {{/numLoop}}
+        </div>
+    </div>
+    <div class="attributes">
+        {{#each data.data.woundPenalties as |woundPenalty key|}}
+        <div>
+            <div class="attribute flexrow flex-center-text-left">
+                <div
+                    for="data.data.woundPenalties.{{key}}.value"
+                    data-roll="{{woundPenalty.value}}"
+                    data-label="{{localize woundPenalty.name}}"
+                    data-ability="true"
+                    >{{localize woundPenalty.name}}
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

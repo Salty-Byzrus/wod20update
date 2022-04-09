@@ -159,8 +159,8 @@ Hooks.once("init", async function () {
   );
 
   // TODO: there exist math helpers for handlebars
-  Handlebars.registerHelper("remorse", function (humanity, stain) {
-    return 10 - humanity - stain;
+  Handlebars.registerHelper("remorse", function (humanity) {
+    return 10 - humanity;
   });
 
   Handlebars.registerHelper("numLoop", function (num, options) {

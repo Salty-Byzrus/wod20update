@@ -116,6 +116,12 @@ export async  function rollDice(
   label =
     label +
     `<p class="roll-label result-success">${game.i18n.localize(
+      "WOD20.Difficulty"
+    )}: ${difficulty}</p>`;
+
+  label =
+    label +
+    `<p class="roll-label result-success">${game.i18n.localize(
       "VTM5E.Successes"
     )}: ${totalSuccess} ${difficultyResult}</p>`;
 

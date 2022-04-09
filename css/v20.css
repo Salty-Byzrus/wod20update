@@ -274,7 +274,7 @@ grid-template-columns: repeat(5, minmax(0, 1fr));
 /*Text Heading for header fields*/
 
 /*Attribute labels eg. Strength, Alertness, Animal Ken etc. etc.*/
-.vtm5e .window-content .stat-label {
+.stat-label {
   font-weight: bold;
   font-size: 16px;
   /*padding-top: 2px; /*hacky fix to text not being inline with dots*/
@@ -326,26 +326,7 @@ grid-template-columns: repeat(5, minmax(0, 1fr));
 /* .vtm5e .item-form {
   font-family: "Roboto", sans-serif;
 } */
-/* HEADER SECTION*/
-/*obsolete*/
-.vtm5e .sheet-header {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 250px;
-  flex: 0 0 250px;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-}
+
 /*Fix the height of the header section*/
 .header-section{
     display: flex;
@@ -448,7 +429,7 @@ grid-template-columns: repeat(5, minmax(0, 1fr));
   margin-right: 0;
   border: 1px solid #000000;
 }
-/*Text above image*/
+/*Text above Profileimage*/
 .vtm5e .header-section-2col .profile-img-zone .heading {
   color: #790813;
   font-family: "cormorantlight", sans-serif;
@@ -458,9 +439,6 @@ grid-template-columns: repeat(5, minmax(0, 1fr));
   text-decoration: none;
   margin-bottom: 5px;
 }
-
-
-
 
 .vtm5e .header-section-2col label {
     display: block;
@@ -667,13 +645,25 @@ grid-template-columns: repeat(5, minmax(0, 1fr));
   height: 14px;
   width: 14px;
   border: 1px solid black;
-  display: inline-block;
   cursor: pointer;
 }
 
-.vtm5e .resource-counter .resource-counter-step[data-state="-"] {
+.vtm5e .resource-counter .makeflex{
+    display: flex;
+    
+}
+
+.vtm5e .resource-counter .makeinlineblock{
+    display: inline-block;
+}
+
+.vtm5e .stat-counter .stat-counter-step {
   background-color: #790813;
 }
+
+.vtm5e .resource-counter .resource-counter-step[data-state="-"] {
+    background-color: #790813;
+  }
 
 .vtm5e .resource-counter .resource-counter-step[data-state="/"] {
   background:
@@ -761,7 +751,7 @@ grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 
-/* Not in use for V208*/
+/* Not in use for V20??*/
 .roll-img.hunger-dice {
   background: rgba(255, 230, 230, 0.5);
   border-color: #790813;
