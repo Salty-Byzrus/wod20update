@@ -16,8 +16,8 @@
                 "headers": {
                     "concept": "",
                     "chronicle": "",
-                    "ambition": "",
-                    "desire": "",
+                    "nature": "",
+                    "demeanor": "",
                     "eyecolour": "",
                     "haircolour": "",
                     "height": "",
@@ -45,7 +45,7 @@
                     "aggravated": 0,
                     "superficial": 0,
                     "lethal": 0,
-                    "max": 5
+                    "max": 7
                 },
                 "bloodpool": {
                     "full": 0,
@@ -59,35 +59,43 @@
                 "woundPenalties": {
                     "healthy": {
                         "value": "healthy",
-                        "name": "VTM5E.Healthy"
+                        "name": "VTM5E.CriticalSuccess"
                     },
                     "bruised": {
                         "value": "bruised",
-                        "name": "VTM5E.Bruised"
+                        "name": "WOD20.Bruised"
                     },
                     "hurt": {
                         "value": "hurt",
-                        "name": "VTM5E.Hurt"
+                        "name": "WOD20.Hurt"
                     },
                     "injured": {
                         "value": "injured",
-                        "name": "VTM5E.Injured"
+                        "name": "WOD20.Injured"
                     },
                     "wounded": {
                         "value": "wounded",
-                        "name": "VTM5E.Wounded"
+                        "name": "WOD20.Wounded"
                     },
                     "mauled": {
                         "value": "mauled",
-                        "name": "VTM5E.Mauled"
+                        "name": "WOD20.Mauled"
                     },
                     "crippled": {
                         "value": "crippled",
-                        "name": "VTM5E.Crippled"
+                        "name": "WOD20.Crippled"
                     },
                     "incapacitated": {
                         "value": "incapacitated",
-                        "name": "VTM5E.Incapacitated"
+                        "name": "WOD20.Incapacitated"
+                    },
+                    "torpor": {
+                        "value": "torpor",
+                        "name": "WOD20.Torpor"
+                    },
+                    "finaldeath": {
+                        "value": "finaldeath",
+                        "name": "WOD20.FinalDeath"
                     }
                 },
                 "abilities": {
@@ -332,8 +340,6 @@
                     "demeanor": "",
                     "concept": "",
                     "chronicle": "",
-                    "ambition": "",
-                    "desire": "",
                     "eyecolour": "",
                     "haircolour": "",
                     "height": ""
@@ -347,13 +353,13 @@
                 },
                 "humanity": {
                     "value": 0,
-                    "stains": 0
+                    "max": 10
                 },
                 "health": {
                     "aggravated": 0,
                     "superficial": 0,
                     "lethal": 0,
-                    "max": 5
+                    "max": 7
                 },
                 "bloodpool": {
                     "full": 0,
@@ -367,35 +373,43 @@
                 "woundPenalties": {
                     "healthy": {
                         "value": "healthy",
-                        "name": "VTM5E.Healthy"
+                        "name": "VTM5E.MessyCritical"
                     },
                     "bruised": {
                         "value": "bruised",
-                        "name": "VTM5E.Bruised"
+                        "name": "WOD20.Bruised"
                     },
                     "hurt": {
                         "value": "hurt",
-                        "name": "VTM5E.Hurt"
+                        "name": "WOD20.Hurt"
                     },
                     "injured": {
                         "value": "injured",
-                        "name": "VTM5E.Injured"
+                        "name": "WOD20.Injured"
                     },
                     "wounded": {
                         "value": "wounded",
-                        "name": "VTM5E.Wounded"
+                        "name": "WOD20.Wounded"
                     },
                     "mauled": {
                         "value": "mauled",
-                        "name": "VTM5E.Mauled"
+                        "name": "WOD20.Mauled"
                     },
                     "crippled": {
                         "value": "crippled",
-                        "name": "VTM5E.Crippled"
+                        "name": "WOD20.Crippled"
                     },
                     "incapacitated": {
                         "value": "incapacitated",
-                        "name": "VTM5E.Incapacitated"
+                        "name": "WOD20.Incapacitated"
+                    },
+                    "torpor": {
+                        "value": "torpor",
+                        "name": "WOD20.Torpor"
+                    },
+                    "finaldeath": {
+                        "value": "finaldeath",
+                        "name": "WOD20.FinalDeath"
                     }
                 },
                 "abilities": {
