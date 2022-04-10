@@ -57,40 +57,34 @@
     margin-top: 10px;
 }
 .grid-5col {
-grid-column: span 5 / span 5;
-grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-column: span 5 / span 5;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 .grid-6col {
     display: grid;
     grid-column: span 6 / span 6;
     grid-template-columns: repeat(6, minmax(0, 1fr));
 }
-
 .grid-7col {
   grid-column: span 7 / span 7;
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
-
 .grid-8col {
   grid-column: span 8 / span 8;
   grid-template-columns: repeat(8, minmax(0, 1fr));
 }
-
 .grid-9col {
   grid-column: span 9 / span 9;
   grid-template-columns: repeat(9, minmax(0, 1fr));
 }
-
 .grid-10col {
   grid-column: span 10 / span 10;
   grid-template-columns: repeat(10, minmax(0, 1fr));
 }
-
 .grid-11col {
   grid-column: span 11 / span 11;
   grid-template-columns: repeat(11, minmax(0, 1fr));
 }
-
 .grid-12col {
   grid-column: span 12 / span 12;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -111,7 +105,6 @@ grid-template-columns: repeat(5, minmax(0, 1fr));
   border-radius: 5px;
   align-self: stretch;
   margin-bottom: 5px;
-  margin
 }
 
 .flex-group-left {
@@ -305,29 +298,24 @@ grid-template-columns: repeat(5, minmax(0, 1fr));
 
 /* Styles limited to vtm5e sheets */
 
+
+
 /*Fix the height of the header section*/
 .header-section{
     display: flex;
     flex:0 0 250px
 }
+/*Layout of header section*/
 .header-section-2col {
-  display: grid;
-  grid-column: span 2 / span 2;
-  grid-template-columns: 200px auto;
-  gap: 5px;
-  margin: 0px 0;
-  padding: 0;
-  height:100%;
-}
-.header-section-3col {
     display: grid;
-    grid-column: span 3 / span 3;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
-    margin: 5px 0;
+    grid-column: span 2 / span 2;
+    grid-template-columns: 200px auto;
+    gap: 5px;
+    margin: 0px 0;
     padding: 0;
-    height: 20%;
+    height:100%;
 }
+/*Layout of boxes in right side of header section*/
 .item1 { grid-area: health; }
 .item2 { grid-area: humanity; }
 .item3 { grid-area: willpower; }
@@ -346,6 +334,7 @@ grid-template-columns: repeat(5, minmax(0, 1fr));
     height: 80%;
     max-width:100%
 }
+/*For layout of header box sections, willpower, blod pool etc.*/
 .flex-column {
     padding: 5px;
     border: 1px solid #790813;
@@ -354,91 +343,96 @@ grid-template-columns: repeat(5, minmax(0, 1fr));
     display: flex;
     flex-direction: column;
 }
-.middle{
-    margin-top:0px;
-}
-.flex-group-area .bottom{
-    align-items:flex-end;
-}
-
-.vtm5e .coterie-sheet .sheet-header,
-.vtm5e .mortal-sheet .sheet-header,
-.vtm5e .ghoul-sheet .sheet-header {
-  flex: 0 0 155px;
-}
-/*Area of the Profile image and lock button*/
-.vtm5e .header-section-2col .profile-img-zone {
-  max-width: 200px; /* .profile-img width */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  flex: 0 0 100%
-}
-/*Lock/unlock button*/
-.vtm5e .header-section-2col .profile-img-zone button {
-  background: #790813;
-  color: white;
-  font-family: "cormorantlight", sans-serif;
-  font-weight: bold;
-  border: 1px solid #000000;
-}
-/*Frenzy and rotschreck buttons*/
-.vtm5e .header-section-2col .button-section {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    width: 100%;
-    margin-top: 5px;
-}
-/*Profile image deatails*/
-.vtm5e .header-section-2col .profile-img {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 200px;
-  flex: 0 0 200px;
-  min-height: 50px;
-  max-height: 200px;
-  height: auto;
-  width: 200px;
-  margin-right: 0;
-  border: 1px solid #000000;
-}
-/*Text above Profileimage*/
-.vtm5e .header-section-2col .profile-img-zone .heading {
-  color: #790813;
-  font-family: "cormorantlight", sans-serif;
-  text-transform: uppercase;
-  font-size: 22px;
-  font-weight: bold;
-  text-decoration: none;
-  margin-bottom: 5px;
-}
-
-.vtm5e .header-section-2col label {
+.header-section-2col label {
     display: block;
     padding-bottom: 3px;
     text-transform: initial;
     font-size: 16px;
     font-weight: bold;
     color: #790813;
-  }
-.vtm5e .header-section-2col .resource-counter label {
+}
+  .header-section-2col input {
+    width: 100%;
+    height: 30px;
+    margin: 20;
+    font-size: 18px;
+    text-align: left;
+}
+.header-section-2col .resource-counter label {
     color: #000000;
     /*padding-top: 2px; /*hacky fix to text not being inline with dots*/
-  }
-.vtm5e .header-section-2col input {
-  width: 100%;
-  height: 30px;
-  margin: 20;
-  font-size: 18px;
-  text-align: left;
 }
-.vtm5e .header-section-2col .grid-container input {
-  width: 100%;
-  height: 30px;
-  margin: 20;
-  font-size: 18px;
-  text-align: center;
+.header-section-2col .grid-container input {
+    width: 100%;
+    height: 30px;
+    margin: 20;
+    font-size: 18px;
+    text-align: center;
 }
+
+
+
+
+/*obsolete*/
+.vtm5e .coterie-sheet .sheet-header,
+.vtm5e .mortal-sheet .sheet-header,
+.vtm5e .ghoul-sheet .sheet-header {
+  flex: 0 0 155px;
+}
+
+
+
+/*Area of the Profile image and lock button*/
+.header-section-2col .profile-img-zone {
+    max-width: 200px; /* .profile-img width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 0 0 100%
+}
+/*Lock/unlock button*/
+.header-section-2col .profile-img-zone button {
+    background: #790813;
+    color: white;
+    font-family: "cormorantlight", sans-serif;
+    font-weight: bold;
+    border: 1px solid #000000;
+}
+/*Frenzy and rotschreck buttons*/
+.header-section-2col .button-section {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    margin-top: 5px;
+}
+/*Profile image deatails*/
+.header-section-2col .profile-img {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 200px;
+    flex: 0 0 200px;
+    min-height: 50px;
+    max-height: 200px;
+    height: auto;
+    width: 200px;
+    margin-right: 0;
+    border: 1px solid #000000;
+}
+/*Text above Profileimage*/
+.header-section-2col .profile-img-zone .heading {
+    color: #790813;
+    font-family: "cormorantlight", sans-serif;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+
+
+
+
 /*obsolete*/
 .vtm5e .sheet-header input {
   width: 100%;
@@ -448,6 +442,9 @@ grid-template-columns: repeat(5, minmax(0, 1fr));
   margin-left: 10px;
 }
 
+
+
+/*Covers the tab section ie. bottom half of sheet stuff*/
 .vtm5e .sheet-body,
 .vtm5e .sheet-body .tab{
   height: 100%;
@@ -466,6 +463,8 @@ grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 
+
+/*Tab bar*/
 .vtm5e .sheet-tabs {
     -webkit-box-flex: 0;
     -ms-flex: 0;
@@ -496,6 +495,8 @@ grid-template-columns: repeat(5, minmax(0, 1fr));
     background: #790813; /*Selected tab colour*/
     height: 100%; /* removing this make no difference*/
 }
+
+
 
 
 .vtm5e .items-list {
@@ -628,13 +629,6 @@ grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 5px;
     flex-wrap: wrap
 }
-.vtm5e .health-counter .resource-counter-step {
-  height: 14px;
-  width: 14px;
-  border: 1px solid black;
-  cursor: pointer;
-}
-
 
 .vtm5e .resource-counter .resource-counter-step {
   height: 14px;
@@ -643,13 +637,6 @@ grid-template-columns: repeat(5, minmax(0, 1fr));
   cursor: pointer;
 }
 
-.vtm5e .flexcolumn{
-    justify-content: space-evenly;
-}
-
-.vtm5e .resource-counter .makeinlineblock{
-    display: inline-block;
-}
 
 .vtm5e .resource-counter .label{
     display: inline-block;
