@@ -8,9 +8,17 @@
     </div>
     <div>
         <div class="resource-content flexrow flex-center flex-between">
-            <div class="resource-counter" data-states="-:value" data-max="{{data.data.humanity.max}}" data-value="{{data.data.humanity.value}}"  data-name="data.humanity">
+            <div 
+            class="resource-counter" 
+            data-states="x:value" 
+            data-max="{{data.data.humanity.max}}" 
+            data-value="{{data.data.humanity.value}}"  
+            data-name="data.humanity">
                 {{#numLoop 10}}
-                <span class="resource-counter-step makeinlineblock" data-index="{{this}}" data-state=""></span>
+                <span 
+                class="resource-counter-step" 
+                data-index="{{this}}" 
+                data-state=""></span>
                 {{/numLoop}}
             </div>
         </div>

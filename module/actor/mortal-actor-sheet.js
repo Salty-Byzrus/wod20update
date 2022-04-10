@@ -336,17 +336,19 @@ export class MortalActorSheet extends CoterieActorSheet {
       const fulls = Number(data[states["-"]]) || 0;
       const halfs = Number(data[states["/"]]) || 0;
       const crossed = Number(data[states.x]) || 0;
-
+        
+      // Humanity handling need refactoring as it doesnt need to bbe that complicated
       const values = humanity
-        ? new Array(fulls + halfs)
+        ? new Array(halfs + crossed + fulls)
         : new Array(halfs + crossed + fulls );
 
       if (humanity) {
         values.fill("-", 0, fulls);
         values.fill("/", fulls, fulls + halfs);
+        values.fill("x", halfs + fulls, halfs + fulls + crossed);
       } else {
         values.fill("/", 0, halfs);
-        values.fill("-", halfs, halfs + fulls )
+        values.fill("-", halfs, halfs + fulls );
         values.fill("x", halfs + fulls, halfs + fulls + crossed);
 
       }

@@ -17,19 +17,4 @@
             {{/numLoop}}
         </div>
     </div>
-    <div class="attributes">
-        {{#each data.data.woundPenalties as |woundPenalty key|}}
-        <div>
-            <div class="attribute flexrow flex-center-text-left">
-                <div
-                    for="data.data.woundPenalties.{{key}}.value"
-                    data-roll="{{woundPenalty.value}}"
-                    data-label="{{localize woundPenalty.name}}"
-                    data-ability="true"
-                    >{{localize woundPenalty.name}}
-                </div>
-            </div>
-        </div>
-        {{/each}}
-    </div>
 </div>

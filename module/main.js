@@ -142,6 +142,7 @@ Hooks.once("init", async function () {
   });
 
   // TODO: there exist math helpers for handlebars
+  //This hellper may be incorrect for V20
   Handlebars.registerHelper(
     "frenzy",
     function (willpowerMax, willpowerAgg, willpowerSup, humanity) {
@@ -151,6 +152,7 @@ Hooks.once("init", async function () {
     }
   );
 
+  //This hellper may be incorrect for V20
   Handlebars.registerHelper(
     "willpower",
     function (willpowerMax, willpowerAgg, willpowerSup) {
