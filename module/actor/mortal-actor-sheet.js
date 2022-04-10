@@ -273,6 +273,7 @@ export class MortalActorSheet extends CoterieActorSheet {
     }
   }
 
+  // In desperate need of commenting here
   _onSquareCounterChange(event) {
 
     event.preventDefault();
