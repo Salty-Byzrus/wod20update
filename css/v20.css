@@ -448,6 +448,21 @@ grid-template-columns: repeat(5, minmax(0, 1fr));
   margin-left: 10px;
 }
 
+.vtm5e .sheet-body,
+.vtm5e .sheet-body .tab,
+.vtm5e .sheet-body .tab .editor {
+  height: 100%;
+    text-align: left;
+  /* min-height: 100px; */
+}
+.vtm5e .tox .tox-editor-container {
+  background: rgb(209, 209, 209);
+}
+.vtm5e .tox .tox-edit-area {
+  padding: 0 8px;
+}
+
+
 .vtm5e .sheet-tabs {
     -webkit-box-flex: 0;
     -ms-flex: 0;
