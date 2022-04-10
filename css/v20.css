@@ -449,11 +449,14 @@ grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .vtm5e .sheet-body,
-.vtm5e .sheet-body .tab,
-.vtm5e .sheet-body .tab .editor {
+.vtm5e .sheet-body .tab{
   height: 100%;
-    text-align: left;
   /* min-height: 100px; */
+}
+.vtm5e .sheet-body .tab .editor {
+    height: 100%;
+    /* min-height: 100px; */
+    text-align: left;
 }
 .vtm5e .tox .tox-editor-container {
   background: rgb(209, 209, 209);

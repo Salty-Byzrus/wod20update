@@ -115,8 +115,8 @@ Hooks.once("init", async function () {
   });
   Handlebars.registerHelper('le', function( a, b ){
     var next =  arguments[arguments.length-1];
-    console.log(a,b);
-    console.log((a <= b)) 
+    //console.log(a,b);
+    //console.log((a <= b)) 
     return (a <= b) ? next.fn(this) : next.inverse(this);
     
   });
