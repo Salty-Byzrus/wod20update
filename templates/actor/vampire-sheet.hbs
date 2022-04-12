@@ -1,5 +1,4 @@
-<form class="{{cssClass}} flexcol {{#if locked}}locked{{/if}} vampire-sheet"
-  autocomplete="off"
+<form class="{{cssClass}} flexcol {{#if locked}}locked{{/if}} vampire-sheet" autocomplete="off"
 >
     {{!-- Vampire Sheet Header --}}
     <header class="header-section">
@@ -48,7 +47,7 @@
         {{!-- Stats Tab --}} 
         {{>"systems/wod20/templates/actor/parts/stats.html"}} 
         {{!-- Owned Powers Tab --}} 
-        {{> "systems/wod20/templates/actor/parts/disciplines.html"}}
+        {{> "systems/wod20/templates/actor/parts/disciplines.hbs"}}
         {{!-- Owned Features Tab --}} 
         {{>"systems/wod20/templates/actor/parts/advantages.hbs"}} 
         {{!-- Biography Tab --}} 

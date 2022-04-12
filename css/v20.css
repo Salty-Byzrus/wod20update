@@ -515,6 +515,9 @@
   color: #790813;
 }
 
+.vtm5e .items-list .item-header .header-level {
+    text-align: center;
+}
 .vtm5e .items-list .item {
   min-height: 30px;
   line-height: 24px;
@@ -544,9 +547,6 @@
 }
 
 .vtm5e .items-list .item-controls {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 86px;
-  flex: 0 0 86px;
   text-align: right;
 }
 
@@ -755,6 +755,16 @@
   cursor: default;
 }
 
+.vtm5e .locked .resource-minus {
+    opacity: 0;
+    cursor: default !important;
+  }
+  
+  .vtm5e .locked .resource-plus {
+    opacity: 0;
+    cursor: default !important;
+  }
+  
 .willpowerReroll .die {
   margin-left: 3px;
 }

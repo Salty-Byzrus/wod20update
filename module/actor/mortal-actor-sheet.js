@@ -373,9 +373,11 @@ export class MortalActorSheet extends CoterieActorSheet {
     const element = event.currentTarget;
     const dataset = element.dataset;
     const resource = dataset.resource;
-    if (dataset.action === "plus") {
+
+    // button lock will stop dots being added
+    if (dataset.action === "plus" && !this.locked) {
       actorData.data[resource].max++;
-    } else if (dataset.action === "minus") {
+    } else if (dataset.action === "minus" && !this.locked) {
       actorData.data[resource].max = Math.max(
         actorData.data[resource].max - 1,
         0
