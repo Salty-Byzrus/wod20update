@@ -14,92 +14,94 @@
         </li>
         <!-- Iterate through each of the discipline lists -->
         {{#each data.data.disciplines as |discipline key|}}
-        {{#if discipline.visible}}
-        <li class="flexrow-between item-header resource-label">
-            <div class="item-name collapsible">
-                {{localize discipline.name}}
-            </div>
-            <!-- All non-ritual/ceremony powers need dots displayed in the middle -->
-            {{#if (and (ne key "rituals") (ne key "ceremonies"))}}
-            <!-- Make name rollable-->
-            <!--
-            <div class="item-name vrollable" data-roll="{{discipline.value}}" data-label="{{key}}">{{localize
-                discipline.name}}</div>
-            -->
-            <div class="resource-value" data-value="{{discipline.value}}" data-name="data.disciplines.{{key}}.value">
-                <!-- Empty box (for setting back to 0), and then iterate through the rest of the discipline dots -->
-                <span class="resource-value-empty"></span>
-                {{#numLoop 10}}
-                <span class="resource-value-step" data-index="{{this}}"></span>
-                {{/numLoop}}
-            </div>
-            {{else}}
-            <div class="item-name" data-roll="{{discipline.value}}" data-label="{{key}}">{{localize discipline.name}}
-            </div>
-            {{/if}}
-            <div class="item-controls">
-                <a class="item-control item-create" title="{{localize 'VTM5E.AddPower'}}" data-type="power" data-discipline="{{key}}">
-                    <i class="fas fa-plus"></i> 
-                </a>
-                        <!-- Icon to roll the discipline with an attribute -->
-                        <a class="vrollable discipline-dice" title="{{localize 'VTM5E.Roll'}}" data-roll="{{discipline.value}}" data-label="{{key}}">
-                            <i class="fas fa-dice-d20"></i>
-                        </a>
-                        <!-- Icon to show the discipline description to the chat-->
-                        <a class="item-control discipline-chat" title="{{localize 'VTM5E.ShowToChat'}}" data-type="power" data-discipline="{{key}}">
-                            <i class="fas fa-comment-alt"></i>
-                        </a>
-                        <!-- Icon to delete the discipline (as long as it doesn't have any powers) -->
-                        <a class="item-control discipline-delete" title="{{localize 'VTM5E.Delete'}}" data-discipline="{{key}}">
-                            <i class="fas fa-trash"></i>
-                        </a>
-            </div>
-        </li>
-        <!-- Discipline description -->
-        <div class="collapsible-content">
-            <textarea class="discipline-description" name="data.disciplines.{{key}}.description">{{discipline.description}}</textarea>
-        </div>
-        <!-- Iterate through each of the discipline powers -->
-        {{#each (lookup ../actor.disciplines_list key) as |item id|}}
-        <li class="item flexcol" data-item-id="{{item._id}}">
-            <div class="flexrow">
-                <!-- Whether the button is clickable or not to post the power in chat -->
-                {{#if item.data.rollable}}
-                <div class="item-image power-rollable" data-id="{{item._id}}"><img src="{{item.img}}"
-                        title="{{item.name}}" width="24" height="24" alt="{{item.name}}" /></div>
+            {{#if discipline.visible}}
+            <li class="flexrow-between item-header resource-label">
+                <div class="item-name collapsible">
+                    {{localize discipline.name}}
+                </div>
+                <!-- All non-ritual/ceremony powers need dots displayed in the middle -->
+                {{#if (and (ne key "rituals") (ne key "ceremonies"))}}
+                <!-- Make name rollable, commenting out as there is now a roll button-->
+                <!--
+                <div class="item-name vrollable" data-roll="{{discipline.value}}" data-label="{{key}}">{{localize
+                    discipline.name}}</div>
+                -->
+                <div class="resource-value" data-value="{{discipline.value}}" data-name="data.disciplines.{{key}}.value">
+                    <!-- Empty box (for setting back to 0), and then iterate through the rest of the discipline dots -->
+                    <span class="resource-value-empty"></span>
+                    {{#numLoop 10}}
+                    <span class="resource-value-step" data-index="{{this}}"></span>
+                    {{/numLoop}}
+                </div>
                 {{else}}
-                <div class="item-image" data-id="{{item._id}}"><img src="{{item.img}}" title="{{item.name}}"
-                        width="24" height="24" alt="{{item.name}}" /></div>
+                <div class="item-name" data-roll="{{discipline.value}}" data-label="{{key}}">{{localize discipline.name}}
+                </div>
                 {{/if}}
-                <!-- Discipline power name -->
-                <h4 class="item-name collapsible">{{item.name}}</h4>
-                <!-- Item controls for discipline powers -->
+                <!-- Item controls for Discipline sections -->
                 <div class="item-controls">
-                    <!-- Icon to roll the power-->
-                    <a class="power-rollable"  data-id="{{item._id}}" title="{{localize 'VTM5E.Roll'}}" data-roll="{{discipline.value}}">
+                    <!-- Add new discipline power -->
+                    <a class="item-control item-create" title="{{localize 'VTM5E.AddPower'}}" data-type="power" data-discipline="{{key}}">
+                        <i class="fas fa-plus"></i> 
+                    </a>
+                    <!-- Icon to roll the discipline with an attribute -->
+                    <a class="vrollable discipline-dice" title="{{localize 'VTM5E.Roll'}}" data-roll="{{discipline.value}}" data-label="{{key}}">
                         <i class="fas fa-dice-d20"></i>
                     </a>
-                    <!-- Icon to edit the power-->
-                    <a class="item-control item-chat" title="{{localize 'VTM5E.ShowToChat'}}"><i
-                        class="fas fa-comment-alt"></i>
+                    <!-- Icon to show the discipline description to the chat-->
+                    <a class="item-control discipline-chat" title="{{localize 'VTM5E.ShowToChat'}}" data-type="power" data-discipline="{{key}}">
+                        <i class="fas fa-comment-alt"></i>
                     </a>
-                    <!-- Icon to display the power in chat -->
-                    <a class="item-control item-edit" title="{{localize 'VTM5E.Edit'}}"><i
-                            class="fas fa-edit"></i>
-                    </a>
-                    <!-- Icon to delete the power -->
-                    <a class="item-control item-delete" title="{{localize 'VTM5E.Delete'}}"><i
-                            class="fas fa-trash"></i>
+                    <!-- Icon to delete the discipline (as long as it doesn't have any powers) -->
+                    <a class="item-control discipline-delete" title="{{localize 'VTM5E.Delete'}}" data-discipline="{{key}}">
+                        <i class="fas fa-trash"></i>
                     </a>
                 </div>
-            </div>
-            <!-- Power description, expandable by a collapse -->
+            </li>
+            <!-- Discipline description -->
             <div class="collapsible-content">
-                {{{item.data.description}}}
+                <textarea class="discipline-description" name="data.disciplines.{{key}}.description">{{discipline.description}}</textarea>
             </div>
-        </li>
-        {{/each}}
-        {{/if}}
+            <!-- Iterate through each of the discipline powers -->
+            {{#each (lookup ../actor.disciplines_list key) as |item id|}}
+                <li class="item flexcol" data-item-id="{{item._id}}">
+                    <div class="flexrow">
+                        <!-- Whether the button is clickable or not to post the power in chat -->
+                        {{#if item.data.rollable}}
+                        <div class="item-image power-rollable" data-id="{{item._id}}"><img src="{{item.img}}"
+                                title="{{item.name}}" width="24" height="24" alt="{{item.name}}" /></div>
+                        {{else}}
+                        <div class="item-image" data-id="{{item._id}}"><img src="{{item.img}}" title="{{item.name}}"
+                                width="24" height="24" alt="{{item.name}}" /></div>
+                        {{/if}}
+                        <!-- Discipline power name -->
+                        <h4 class="item-name collapsible">{{item.name}}</h4>
+                        <!-- Item controls for discipline powers -->
+                        <div class="item-controls">
+                            <!-- Icon to roll the power-->
+                            <a class="power-rollable"  data-id="{{item._id}}" title="{{localize 'VTM5E.Roll'}}" data-roll="{{discipline.value}}">
+                                <i class="fas fa-dice-d20"></i>
+                            </a>
+                            <!-- Icon to edit the power-->
+                            <a class="item-control item-chat" title="{{localize 'VTM5E.ShowToChat'}}"><i
+                                class="fas fa-comment-alt"></i>
+                            </a>
+                            <!-- Icon to display the power in chat -->
+                            <a class="item-control item-edit" title="{{localize 'VTM5E.Edit'}}"><i
+                                    class="fas fa-edit"></i>
+                            </a>
+                            <!-- Icon to delete the power -->
+                            <a class="item-control item-delete" title="{{localize 'VTM5E.Delete'}}"><i
+                                    class="fas fa-trash"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Power description, expandable by a collapse -->
+                    <div class="collapsible-content">
+                        {{{item.data.description}}}
+                    </div>
+                </li>
+                {{/each}}
+            {{/if}}
         {{/each}}
     </ol>
 </div>
