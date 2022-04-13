@@ -167,7 +167,12 @@
   justify-content: space-between;
   align-items: space-between;
 }
-
+.flexrow-around {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 .flexrow-between {
     display: flex;
     flex-direction: row;
@@ -263,6 +268,9 @@
 }
 .pad-top {
     padding-top: 5px;
+}
+.align-adjust-left{
+    margin-left: 10px;
 }
 /*Text Heading for header fields*/
 
@@ -464,37 +472,44 @@
 
 
 
-/*Tab bar*/
 .vtm5e .sheet-tabs {
     -webkit-box-flex: 0;
     -ms-flex: 0;
     flex: 0;
 }
 .vtm5e .tabs {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between !important;
-}
+    height: 40px;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+  }
 .vtm5e .tabs .item {
     font-size: 18px; 
-    line-height: 30px;
+    line-height: 40px;
+    font-weight: bold;
     flex: 1;
+    cursor: pointer;
 }
 .vtm5e .tabs .item.active {
+    text-decoration: underline;
     text-shadow: none;
-    color: rgb(255, 255, 255); /*Selected tab text colour*/
+    color: rgb(255, 255, 255);
 }
 .vtm5e .window-content nav.sheet-tabs {
-    /*Text size*/
-    margin-bottom: 10px; /*Gap between tab and enxt section (Attributes)*/
-    border-top: 2px solid rgb(0, 0, 0);
-    border-bottom: 2px solid rgb(0, 0, 0);
+    color: black;
+    font-size: 8px;
+    margin-bottom: 20px;
+    height: 41px; /*makes no difference if removed*/
+    padding: 0;
+    border-top: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+  }
+.vtm5e .window-content nav.sheet-tabs .item.active {
+    background: #790813;
+    text-decoration: none;
 }
-.vtm5e .window-content nav.sheet-tabs a.item.active {
-    background: #790813; /*Selected tab colour*/
-    height: 100%; /* removing this make no difference*/
-}
+
+  
+
 
 
 
@@ -557,13 +572,27 @@
   cursor: pointer;
 }
 
-.vtm5e .collapsible-content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
+.vtm5e .collapsible-discipline {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
+.vtm5e .collapsible-content {
+    padding: 0 6px;
+    margin-left: 16px;
+    margin-right: 16px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-radius: 5px;
+    background-color:rgb(220, 220, 220);
+  }
 
+.vtm5e .discipline-description {
+    width: 100%;
+    resize: none;
+  }
 /* Resource boxes CSS */
 
 /* Stat Dots*/
@@ -755,16 +784,18 @@
   cursor: default;
 }
 
+/*Make button invisible when lock is on*/
 .vtm5e .locked .resource-minus {
     opacity: 0;
     cursor: default !important;
-  }
-  
+}
+ 
+/*Make button invisible when lock is on*/ 
   .vtm5e .locked .resource-plus {
     opacity: 0;
     cursor: default !important;
-  }
-  
+}
+
 .willpowerReroll .die {
   margin-left: 3px;
 }

@@ -2,36 +2,46 @@
     {{#if isCharacter}}
     <label class="resource-label flex-center">{{localize "VTM5E.Boons"}}</label>
     <ol class="items-list">
-        <li class="item flexrow-between item-header resource-label">
+        <!-- Header of the boon list -->
+        <li class="item flexrow item-header resource-label">
             <div class="item-name">{{localize "VTM5E.Name"}}</div>
-            <div class="item-name">{{localize "VTM5E.Type"}}</div>
+            <div class="item-name header-level">{{localize "VTM5E.Type"}}</div>
+            <!-- Item controls for adding new boons -->
             <div class="item-controls">
                 <a class="item-control item-create" title="{{localize 'VTM5E.AddItem'}}"
                     data-type="boon"><i class="fas fa-plus"></i> {{localize "VTM5E.AddItem"}}
                 </a>
             </div>
         </li>
+        <!-- Iterate through each of the boons -->
         {{#each actor.boons as |item id|}}
         <li class="item flexcol" data-item-id="{{item._id}}">
             <div class="flexrow">
-                <div class="flexrow">
-                    <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"
-                        alt="{{item.name}}" />
-                    </div>
-                    <h4 class="item-name collapsible">{{item.name}}</h4>
+                <div class="item-image">
+                    <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" alt="{{item.name}}" />
                 </div>
-                <h4 class="item-name">{{item.data.boontype}}</h4>
+                <h4 class="item-name collapsible">{{item.name}}</h4>
+                <!-- Boon name -->
+                <h4 class="item-name flex-center">{{item.data.boontype}}</h4>
+                <!-- Item controls for discipline powers -->
                 <div class="item-controls">
+                    <!-- Icon to display the boon in chat -->
                     <a class="item-control item-chat" title="{{localize 'VTM5E.ShowToChat'}}"><i
                         class="fas fa-comment-alt"></i></a>
+                    <!-- Icon to edit the boon-->
                     <a class="item-control item-edit" title="{{localize 'VTM5E.Edit'}}"><i
-                            class="fas fa-edit"></i></a>
+                            class="fas fa-edit"></i>
+                    </a>
+                    <!-- Icon to delete the boon -->
                     <a class="item-control item-delete" title="{{localize 'VTM5E.Delete'}}"><i
                             class="fas fa-trash"></i></a>
                 </div>
             </div>
+            <!-- Boon description, expandable by a collapse -->
             <div class="collapsible-content">
-                {{{item.data.description}}}
+                <div class="discipline-description">
+                    {{{item.data.description}}}
+                </div>
             </div>
         </li>
         {{/each}}

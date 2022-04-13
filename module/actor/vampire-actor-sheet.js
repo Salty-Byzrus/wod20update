@@ -83,10 +83,11 @@ export class VampireActorSheet extends GhoulActorSheet {
     const dataset = element.dataset;
     const item = this.actor.items.get(dataset.id);
     let disciplineValue = 0;
+    //This is 5th
     // if (item.data.data.discipline === "rituals") {
     //   disciplineValue = this.actor.data.data.disciplines.sorcery.value;
     // } else
-
+    
     if (item.data.data.discipline === "ceremonies") {
       disciplineValue = this.actor.data.data.disciplines.oblivion.value;
     } else {
