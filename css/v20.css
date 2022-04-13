@@ -8,11 +8,15 @@
   font-style: normal;
 }
 
+form {
+    
+    overflow-y: hidden;
+}
 /* Global styles */
 .window-app {
   font-family: "Roboto", sans-serif;
+  
 }
-
 .rollable:hover,
 .rollable:focus,
 .vrollable:hover,
@@ -309,12 +313,13 @@
 
 
 /*Fix the height of the header section*/
-.header-section{
+.vtm5e .header-section{
     display: flex;
-    flex:0 0 250px
+    flex:0 0 250px;
+    
 }
 /*Layout of header section*/
-.header-section-2col {
+.vtm5e .header-section-2col {
     display: grid;
     grid-column: span 2 / span 2;
     grid-template-columns: 200px auto;
@@ -329,7 +334,7 @@
 .item3 { grid-area: willpower; }
 .item4 { grid-area: bloodpool; }
 .item5 { grid-area: experience; }
-.grid-container {
+.vtm5e .grid-container {
     display: grid;
     grid-template-areas:
         'health willpower humanity'
@@ -351,7 +356,7 @@
     display: flex;
     flex-direction: column;
 }
-.header-section-2col label {
+.vtm5e .header-section-2col label {
     display: block;
     padding-bottom: 3px;
     text-transform: initial;
@@ -359,18 +364,18 @@
     font-weight: bold;
     color: #790813;
 }
-  .header-section-2col input {
+.vtm5e .header-section-2col input {
     width: 100%;
     height: 30px;
     margin: 20;
     font-size: 18px;
     text-align: left;
 }
-.header-section-2col .resource-counter label {
+.vtm5e .header-section-2col .resource-counter label {
     color: #000000;
     /*padding-top: 2px; /*hacky fix to text not being inline with dots*/
 }
-.header-section-2col .grid-container input {
+.vtm5e .header-section-2col .grid-container input {
     width: 100%;
     height: 30px;
     margin: 20;
@@ -391,7 +396,7 @@
 
 
 /*Area of the Profile image and lock button*/
-.header-section-2col .profile-img-zone {
+.vtm5e .header-section-2col .profile-img-zone {
     max-width: 200px; /* .profile-img width */
     display: flex;
     align-items: center;
@@ -400,7 +405,7 @@
     flex: 0 0 100%
 }
 /*Lock/unlock button*/
-.header-section-2col .profile-img-zone button {
+.vtm5e .header-section-2col .profile-img-zone button {
     background: #790813;
     color: white;
     font-family: "cormorantlight", sans-serif;
@@ -408,14 +413,14 @@
     border: 1px solid #000000;
 }
 /*Frenzy and rotschreck buttons*/
-.header-section-2col .button-section {
+.vtm5e .header-section-2col .button-section {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
     margin-top: 5px;
 }
 /*Profile image deatails*/
-.header-section-2col .profile-img {
+.vtm5e .header-section-2col .profile-img {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 200px;
     flex: 0 0 200px;
@@ -427,7 +432,7 @@
     border: 1px solid #000000;
 }
 /*Text above Profileimage*/
-.header-section-2col .profile-img-zone .heading {
+.vtm5e .header-section-2col .profile-img-zone .heading {
     color: #790813;
     font-family: "cormorantlight", sans-serif;
     text-transform: uppercase;
@@ -451,7 +456,9 @@
 }
 
 
-
+.vtm5e section {
+    overflow-y: scroll;
+}
 /*Covers the tab section ie. bottom half of sheet stuff*/
 .vtm5e .sheet-body,
 .vtm5e .sheet-body .tab{
@@ -460,11 +467,17 @@
 }
 .vtm5e .sheet-body .tab .editor {
     height: 100%;
-    /* min-height: 100px; */
+    min-height: 200px;
+    max-height: 200px;
+    overflow-y: scroll;
     text-align: left;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color:rgb(230, 230, 230)
 }
 .vtm5e .tox .tox-editor-container {
-  background: rgb(209, 209, 209);
+  background: rgb(230, 230, 230)
 }
 .vtm5e .tox .tox-edit-area {
   padding: 0 8px;
