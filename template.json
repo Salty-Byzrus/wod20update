@@ -933,7 +933,10 @@
             "power",
             "specialty",
             "boon",
-            "customRoll"
+            "customRoll",
+            "merit",
+            "flaw",
+            "background"
         ],
         "templates": {
             "base": {
@@ -945,6 +948,27 @@
                 "base"
             ],
             "featuretype": "merit",
+            "points": 0
+        },
+        "merit": {
+            "templates": [
+                "base"
+            ],
+            "featuretype": "merit",
+            "points": 0
+        },
+        "flaw": {
+            "templates": [
+                "base"
+            ],
+            "featuretype": "flaw",
+            "points": 0
+        },
+        "background": {
+            "templates": [
+                "base"
+            ],
+            "featuretype": "background",
             "points": 0
         },
         "power": {

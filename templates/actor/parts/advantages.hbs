@@ -1,5 +1,4 @@
 <div class="tab" data-group="primary" data-tab="features">
-    {{#if isCharacter}}
     <label class="resource-label flex-center">{{localize "VTM5E.Boons"}}</label>
     <ol class="items-list">
         <!-- Header of the boon list -->
@@ -20,8 +19,9 @@
                 <div class="item-image">
                     <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" alt="{{item.name}}" />
                 </div>
-                <h4 class="item-name collapsible">{{item.name}}</h4>
                 <!-- Boon name -->
+                <h4 class="item-name collapsible">{{item.name}}</h4>
+                <!-- Boon type -->
                 <h4 class="item-name flex-center">{{item.data.boontype}}</h4>
                 <!-- Item controls for discipline powers -->
                 <div class="item-controls">
@@ -46,56 +46,156 @@
         </li>
         {{/each}}
     </ol>
-    {{/if}}
-    <label class="resource-label flex-center pad-top">{{localize "VTM5E.Features"}}</label>
+
+    <div class="pad-top"></div>
+    <label class="resource-label flex-center">{{localize "VTM5E.Merits"}}</label>
     <ol class="items-list">
+        <!-- Header of the boon list -->
         <li class="item flexrow item-header resource-label">
-            <div class="item-name-header">{{localize "VTM5E.Name"}}</div>
-            <div class="item-name-header">{{localize "VTM5E.Points"}}</div>
-        </li>
-        {{#each actor.features as |feature key|}}
-        <li class="flexrow item-header resource-label">
-            <div class="item-name">{{localize (generateFeatureLabel key)}}</div>
+            <div class="item-name">{{localize "VTM5E.Name"}}</div>
+            <div class="item-name header-level">{{localize "VTM5E.Points"}}</div>
+            <!-- Item controls for adding new boons -->
             <div class="item-controls">
-                <a class="item-control item-create" title="{{localize 'VTM5E.AddFeat'}}" data-type="feature"
-                    data-featuretype="{{key}}"><i class="fas fa-plus"></i> {{localize "VTM5E.AddFeat"}}</a>
+                <a class="item-control item-create" title="{{localize 'VTM5E.AddItem'}}"
+                    data-type="merit"><i class="fas fa-plus"></i> {{localize "VTM5E.AddItem"}}
+                </a>
             </div>
         </li>
-        {{#each feature as |item id|}}
+        <!-- Iterate through each of the boons -->
+        {{#each actor.merits as |item id|}}
         <li class="item flexcol" data-item-id="{{item._id}}">
             <div class="flexrow">
-                <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"
-                        alt="{{item.name}}" />
+                <div class="item-image">
+                    <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" alt="{{item.name}}" />
                 </div>
+                <!-- Merit name -->
                 <h4 class="item-name collapsible">{{item.name}}</h4>
-                {{#if (ne key "background")}}
-                <div class="resource-value-static" data-value="{{item.data.points}}" data-name="items.{{item._id}}">
-                    {{#numLoop 5}}
-                    <span class="resource-value-static-step" data-index="{{this}}"></span>
-                    {{/numLoop}}
+                <!-- Merit points -->
+                <h4 class="item-name flex-center">{{item.data.points}}</h4>       
+                <!-- Item controls for discipline powers -->
+                <div class="item-controls">
+                    <!-- Icon to display the merit in chat -->
+                    <a class="item-control item-chat" title="{{localize 'VTM5E.ShowToChat'}}"><i
+                        class="fas fa-comment-alt"></i></a>
+                    <!-- Icon to edit the merit-->
+                    <a class="item-control item-edit" title="{{localize 'VTM5E.Edit'}}"><i
+                            class="fas fa-edit"></i>
+                    </a>
+                    <!-- Icon to delete the merit -->
+                    <a class="item-control item-delete" title="{{localize 'VTM5E.Delete'}}"><i
+                            class="fas fa-trash"></i></a>
                 </div>
-                {{else}}
+            </div>
+            <!-- Merit description, expandable by a collapse -->
+            <div class="collapsible-content">
+                <div class="discipline-description">
+                    {{{item.data.description}}}
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ol>
+
+    <div class="pad-top"></div>
+    <label class="resource-label flex-center">{{localize "VTM5E.Flaws"}}</label>
+    <ol class="items-list">
+        <!-- Header of the boon list -->
+        <li class="item flexrow item-header resource-label">
+            <div class="item-name">{{localize "VTM5E.Name"}}</div>
+            <div class="item-name header-level">{{localize "VTM5E.Points"}}</div>
+            <!-- Item controls for adding new boons -->
+            <div class="item-controls">
+                <a class="item-control item-create" title="{{localize 'VTM5E.AddItem'}}"
+                    data-type="flaw"><i class="fas fa-plus"></i> {{localize "VTM5E.AddItem"}}
+                </a>
+            </div>
+        </li>
+        <!-- Iterate through each of the boons -->
+        {{#each actor.flaws as |item id|}}
+        <li class="item flexcol" data-item-id="{{item._id}}">
+            <div class="flexrow">
+                <div class="item-image">
+                    <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" alt="{{item.name}}" />
+                </div>
+                <!-- Merit name -->
+                <h4 class="item-name collapsible">{{item.name}}</h4>
+                <!-- Merit points -->
+                <h4 class="item-name flex-center">{{item.data.points}}</h4>       
+                <!-- Item controls for discipline powers -->
+                <div class="item-controls">
+                    <!-- Icon to display the merit in chat -->
+                    <a class="item-control item-chat" title="{{localize 'VTM5E.ShowToChat'}}"><i
+                        class="fas fa-comment-alt"></i></a>
+                    <!-- Icon to edit the merit-->
+                    <a class="item-control item-edit" title="{{localize 'VTM5E.Edit'}}"><i
+                            class="fas fa-edit"></i>
+                    </a>
+                    <!-- Icon to delete the merit -->
+                    <a class="item-control item-delete" title="{{localize 'VTM5E.Delete'}}"><i
+                            class="fas fa-trash"></i></a>
+                </div>
+            </div>
+            <!-- Merit description, expandable by a collapse -->
+            <div class="collapsible-content">
+                <div class="discipline-description">
+                    {{{item.data.description}}}
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ol>
+
+    <div class="pad-top"></div>
+    <label class="resource-label flex-center">{{localize "VTM5E.Backgrounds"}}</label>
+    <ol class="items-list">
+        <!-- Header of the boon list -->
+        <li class="item flexrow item-header resource-label">
+            <div class="item-name">{{localize "VTM5E.Name"}}</div>
+            <div class="item-name header-level">{{localize "VTM5E.Level"}}</div>
+            <!-- Item controls for adding new boons -->
+            <div class="item-controls">
+                <a class="item-control item-create" title="{{localize 'VTM5E.AddItem'}}"
+                    data-type="background"><i class="fas fa-plus"></i> {{localize "VTM5E.AddItem"}}
+                </a>
+            </div>
+        </li>
+        <!-- Iterate through each of the boons -->
+        {{#each actor.backgrounds as |item id|}}
+        <li class="item flexcol" data-item-id="{{item._id}}">
+            <div class="flexrow">
+                <div class="item-image">
+                    <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" alt="{{item.name}}" />
+                </div>
+                <!-- Merit name -->
+                <h4 class="item-name collapsible">{{item.name}}</h4>
+                <!-- Merit points -->
                 <div class="resource-value" data-value="{{item.data.points}}" data-name="items.{{item._id}}">
                     <span class="resource-value-empty"></span>
                     {{#numLoop 5}}
                     <span class="resource-value-step" data-index="{{this}}"></span>
                     {{/numLoop}}
-                </div>
-                {{/if}}
+                </div>     
+                <!-- Item controls for discipline powers -->
                 <div class="item-controls">
+                    <!-- Icon to display the merit in chat -->
                     <a class="item-control item-chat" title="{{localize 'VTM5E.ShowToChat'}}"><i
                         class="fas fa-comment-alt"></i></a>
+                    <!-- Icon to edit the merit-->
                     <a class="item-control item-edit" title="{{localize 'VTM5E.Edit'}}"><i
-                            class="fas fa-edit"></i></a>
+                            class="fas fa-edit"></i>
+                    </a>
+                    <!-- Icon to delete the merit -->
                     <a class="item-control item-delete" title="{{localize 'VTM5E.Delete'}}"><i
                             class="fas fa-trash"></i></a>
                 </div>
             </div>
+            <!-- Merit description, expandable by a collapse -->
             <div class="collapsible-content">
-                {{{item.data.description}}}
+                <div class="discipline-description">
+                    {{{item.data.description}}}
+                </div>
             </div>
         </li>
-        {{/each}}
         {{/each}}
     </ol>
 </div>

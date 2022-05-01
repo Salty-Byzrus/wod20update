@@ -1,0 +1,31 @@
+<form class="{{cssClass}} item-sheet" autocomplete="off">
+    <header class="header-section">
+        <header class="header-section-2col">
+            <div class = "profile-img-zone flex-group-center">
+                <div class ="heading">{{localize "VTM5E.Flaw"}}</div>
+                <img class="profile-img img-height" src="{{item.img}}" data-edit="img" title="{{item.name}}" 
+                    alt="Item Image" />
+            </div> 
+            <div class="item-flex-group flex-1">
+                <div class="grid grid-2col flex-left">
+                    <div>
+                        <label>{{localize "VTM5E.Name"}}</label>
+                        <input type="text" name="name" value="{{item.name}}" />
+                    </div>
+                    <div>
+                        <label>{{localize "VTM5E.Points"}}</label>
+                        <input type="number" name="data.points" value="{{data.data.points}}" />
+                    </div>
+                </div>
+            </div> 
+        </header>
+    </header>
+    <div class="border-bottom"></div>
+
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body tab">
+        <label class="description-label flex-left pad-top">{{localize "VTM5E.Description"}}</label>
+        {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
+    </section>
+</form> 

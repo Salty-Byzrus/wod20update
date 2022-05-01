@@ -11,6 +11,7 @@
 form {
     
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 /* Global styles */
 .window-app {
@@ -218,6 +219,10 @@ form {
   align-items: center;
   margin-top: 10px;
 }
+
+.flex-1{
+    flex:1;
+}
 /* New Styles */
 .vtm5e {
 
@@ -273,6 +278,9 @@ form {
 .pad-top {
     padding-top: 5px;
 }
+.pad-20{
+    padding-top: 20px;
+}
 .align-adjust-left{
     margin-left: 10px;
 }
@@ -327,34 +335,8 @@ form {
     margin: 0px 0;
     padding: 0;
     height:100%;
-}
-/*Layout of boxes in right side of header section*/
-.item1 { grid-area: health; }
-.item2 { grid-area: humanity; }
-.item3 { grid-area: willpower; }
-.item4 { grid-area: bloodpool; }
-.item5 { grid-area: experience; }
-.vtm5e .grid-container {
-    display: grid;
-    grid-template-areas:
-        'health willpower humanity'
-        'health bloodpool experience';
-    gap: 5px;
-    background-color:;
-    padding: 0;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 4fr 3fr 3fr;
-    height: 80%;
-    max-width:100%
-}
-/*For layout of header box sections, willpower, blod pool etc.*/
-.flex-column {
-    padding: 5px;
-    border: 1px solid #790813;
-    border-radius: 5px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    max-width:100%;
+    flex:1;
 }
 .vtm5e .header-section-2col label {
     display: block;
@@ -382,8 +364,6 @@ form {
     font-size: 18px;
     text-align: center;
 }
-
-
 
 
 /*obsolete*/
@@ -443,6 +423,33 @@ form {
 }
 
 
+/*Layout of boxes in right side of header section*/
+.item1 { grid-area: health; }
+.item2 { grid-area: humanity; }
+.item3 { grid-area: willpower; }
+.item4 { grid-area: bloodpool; }
+.item5 { grid-area: experience; }
+.vtm5e .grid-container {
+    display: grid;
+    grid-template-areas:
+        'health willpower humanity'
+        'health bloodpool experience';
+    gap: 5px;
+    padding: 0;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 4fr 3fr 3fr;
+    height: 80%;
+    max-width:100%
+}
+/*For layout of header box sections, willpower, blod pool etc.*/
+.flex-column {
+    padding: 5px;
+    border: 1px solid #790813;
+    border-radius: 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
 
 
@@ -510,7 +517,7 @@ form {
 .vtm5e .window-content nav.sheet-tabs {
     color: black;
     font-size: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     height: 41px; /*makes no difference if removed*/
     padding: 0;
     border-top: 1px solid rgb(0, 0, 0);
@@ -824,4 +831,159 @@ form {
 
 #sidebar.app {
   background: rgba(20, 0, 0, 0.9);
+}
+
+
+.border-bottom{
+    padding-top: 5px;
+    border-bottom: 1px solid black;
+
+}
+
+
+.item-sheet .header-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0px 0;
+    padding: 0;
+    align-items: center;
+}
+.item-sheet .header-row .profile-img {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100px;
+    flex: 0 0 100px;
+    height: auto;
+    width: 100px;
+    margin-right: 0;
+    border: 1px solid #000000;
+}
+
+.item-sheet .item-header {
+    vertical-align: baseline;
+    align-items: center;
+}
+.heading {
+    color: #790813;
+    font-family: "cormorantlight", sans-serif;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+/*Body of items*/
+.item-sheet .sheet-body {
+    height: 100%;
+}
+.item-sheet section {
+    overflow-y: scroll;
+}
+.item-sheet input {
+    width:100%;
+    height: 30px;
+    font-size: 20px;
+    text-align: left;
+    vertical-align: top;
+    font-family: initial;
+    background: white;
+    border: 1px solid #000000;
+}
+.item-sheet .description-label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #790813;
+    border-bottom: 1px solid #790813;
+    width: 100%;
+    display: block;
+    text-transform: uppercase;
+}
+.item-sheet .editor {
+    height: 100%;
+    min-height: 200px;
+    max-height: 350px;
+    overflow-y: scroll;
+    text-align: left;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color:rgb(230, 230, 230)
+}
+.item-sheet .tox .tox-editor-container {
+    background: rgb(230, 230, 230)
+}
+.item-sheet .tox .tox-edit-area {
+    padding: 0 8px;
+}
+.align-item-center{
+  align-items: center;
+}
+.items-2-col{
+    display: grid;
+    grid-column: span 2 / span 2;
+    grid-template-columns: max-content 100%;
+    gap: 10px;
+    margin: 5px 0;
+    align-items: center;
+}
+
+.item-sheet .header-section-items{
+    display: flex;
+    flex:0 0 150px;   
+}
+.item-sheet .item-header-section-2col {
+    display: grid;
+    grid-column: span 2 / span 2;
+    grid-template-columns: max-content 100%;
+    gap: 5px;
+    margin: 0px 0;
+    padding: 0;
+    height:100%;
+}
+.item-sheet .item-header-section-2col .profile-img-zone {
+    max-width: 150px; /* .profile-img width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 0 0 100%
+}
+.item-sheet .item-header-section-2col .profile-img{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 140px;
+    flex: 0 0 140px;
+    min-height: 50px;
+    max-height: 140px;
+    height: auto;
+    width: 140px;
+    margin-right: 0;
+    border: 1px solid #000000;
+}
+.item-flex-group {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #790813;
+    border-radius: 5px;
+    align-self: stretch;
+    margin-bottom: 5px;
+  }
+  .vtm5e .grid-container {
+    display: grid;
+    grid-template-areas:
+        'health willpower humanity'
+        'health bloodpool experience';
+    gap: 5px;
+    padding: 0;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 4fr 3fr 3fr;
+    height: 80%;
+    max-width:100%
 }

@@ -71,25 +71,45 @@ export class MortalActorSheet extends CoterieActorSheet {
     const specialties = [];
     const boons = [];
     const customRolls = [];
+    const merits = [];
+    const flaws = [];
+    const backgrounds = [];
 
     // Iterate through items, allocating to containers
     for (const i of sheetData.items) {
-      i.img = i.img || DEFAULT_TOKEN;
-      if (i.type === "specialty") {
-        // Append to specialties.
-        specialties.push(i);
-      } else if (i.type === "boon") {
-        // Append to boons.
-        boons.push(i);
-      } else if (i.type === "customRoll") {
-        // Append to custom rolls.
-        customRolls.push(i);
-      }
+        i.img = i.img || DEFAULT_TOKEN;
+        if (i.type === "specialty") {
+            // Append to specialties.
+            specialties.push(i);
+        } 
+        else if (i.type === "boon") {
+            // Append to boons.
+            boons.push(i);
+        } 
+        else if (i.type === "customRoll") {
+            // Append to custom rolls.
+            customRolls.push(i);
+        }
+        else if (i.type === "merit") {
+            // Append to custom rolls.
+            merits.push(i);
+        }
+        else if (i.type === "flaw") {
+            // Append to custom rolls.
+            flaws.push(i);
+        }
+        else if (i.type === "background") {
+            // Append to custom rolls.
+            backgrounds.push(i);
+        }
     }
     // Assign and return
     actorData.specialties = specialties;
     actorData.boons = boons;
     actorData.customRolls = customRolls;
+    actorData.flaws = flaws;
+    actorData.merits = merits;
+    actorData.backgrounds = backgrounds;
   }
 
   /* -------------------------------------------- */
