@@ -1,0 +1,201 @@
+<div class="tab" data-group="primary" data-tab="features">
+    <label class="resource-label flex-center">{{localize "WOD20.advantages.boons"}}</label>
+    <ol class="items-list">
+        <!-- Header of the boon list -->
+        <li class="item flexrow item-header resource-label">
+            <div class="item-name">{{localize "WOD20.generic.name"}}</div>
+            <div class="item-name header-level">{{localize "WOD20.generic.type"}}</div>
+            <!-- Item controls for adding new boons -->
+            <div class="item-controls">
+                <a class="item-control item-create" title="{{localize 'WOD20.generic.add'}}"
+                    data-type="boon"><i class="fas fa-plus"></i> {{localize "WOD20.generic.add"}}
+                </a>
+            </div>
+        </li>
+        <!-- Iterate through each of the boons -->
+        {{#each actor.boons as |item id|}}
+        <li class="item flexcol" data-item-id="{{item._id}}">
+            <div class="flexrow">
+                <div class="item-image">
+                    <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" alt="{{item.name}}" />
+                </div>
+                <!-- Boon name -->
+                <h4 class="item-name collapsible">{{item.name}}</h4>
+                <!-- Boon type -->
+                <h4 class="item-name flex-center">{{item.data.boontype}}</h4>
+                <!-- Item controls for discipline powers -->
+                <div class="item-controls">
+                    <!-- Icon to display the boon in chat -->
+                    <a class="item-control item-chat" title="{{localize 'WOD20.generic.showtochat'}}"><i
+                        class="fas fa-comment-alt"></i></a>
+                    <!-- Icon to edit the boon-->
+                    <a class="item-control item-edit" title="{{localize 'WOD20.generic.edit'}}"><i
+                            class="fas fa-edit"></i>
+                    </a>
+                    <!-- Icon to delete the boon -->
+                    <a class="item-control item-delete" title="{{localize 'WOD20.generic.delete'}}"><i
+                            class="fas fa-trash"></i></a>
+                </div>
+            </div>
+            <!-- Boon description, expandable by a collapse -->
+            <div class="collapsible-content">
+                <div class="discipline-description">
+                    {{{item.data.description}}}
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ol>
+
+    <div class="pad-top"></div>
+    <label class="resource-label flex-center">{{localize "WOD20.advantages.merits"}}</label>
+    <ol class="items-list">
+        <!-- Header of the boon list -->
+        <li class="item flexrow item-header resource-label">
+            <div class="item-name">{{localize "WOD20.generic.name"}}</div>
+            <div class="item-name header-level">{{localize "WOD20.generic.points"}}</div>
+            <!-- Item controls for adding new boons -->
+            <div class="item-controls">
+                <a class="item-control item-create" title="{{localize 'WOD20.generic.add'}}"
+                    data-type="merit"><i class="fas fa-plus"></i> {{localize "WOD20.generic.add"}}
+                </a>
+            </div>
+        </li>
+        <!-- Iterate through each of the boons -->
+        {{#each actor.merits as |item id|}}
+        <li class="item flexcol" data-item-id="{{item._id}}">
+            <div class="flexrow">
+                <div class="item-image">
+                    <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" alt="{{item.name}}" />
+                </div>
+                <!-- Merit name -->
+                <h4 class="item-name collapsible">{{item.name}}</h4>
+                <!-- Merit points -->
+                <h4 class="item-name flex-center">{{item.data.points}}</h4>       
+                <!-- Item controls for discipline powers -->
+                <div class="item-controls">
+                    <!-- Icon to display the merit in chat -->
+                    <a class="item-control item-chat" title="{{localize 'WOD20.generic.showtochat'}}"><i
+                        class="fas fa-comment-alt"></i></a>
+                    <!-- Icon to edit the merit-->
+                    <a class="item-control item-edit" title="{{localize 'WOD20.generic.edit'}}"><i
+                            class="fas fa-edit"></i>
+                    </a>
+                    <!-- Icon to delete the merit -->
+                    <a class="item-control item-delete" title="{{localize 'WOD20.generic.delete'}}"><i
+                            class="fas fa-trash"></i></a>
+                </div>
+            </div>
+            <!-- Merit description, expandable by a collapse -->
+            <div class="collapsible-content">
+                <div class="discipline-description">
+                    {{{item.data.description}}}
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ol>
+
+    <div class="pad-top"></div>
+    <label class="resource-label flex-center">{{localize "WOD20.advantages.flaws"}}</label>
+    <ol class="items-list">
+        <!-- Header of the boon list -->
+        <li class="item flexrow item-header resource-label">
+            <div class="item-name">{{localize "WOD20.generic.name"}}</div>
+            <div class="item-name header-level">{{localize "WOD20.generic.points"}}</div>
+            <!-- Item controls for adding new boons -->
+            <div class="item-controls">
+                <a class="item-control item-create" title="{{localize 'WOD20.generic.add'}}"
+                    data-type="flaw"><i class="fas fa-plus"></i> {{localize "WOD20.generic.add"}}
+                </a>
+            </div>
+        </li>
+        <!-- Iterate through each of the boons -->
+        {{#each actor.flaws as |item id|}}
+        <li class="item flexcol" data-item-id="{{item._id}}">
+            <div class="flexrow">
+                <div class="item-image">
+                    <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" alt="{{item.name}}" />
+                </div>
+                <!-- Merit name -->
+                <h4 class="item-name collapsible">{{item.name}}</h4>
+                <!-- Merit points -->
+                <h4 class="item-name flex-center">{{item.data.points}}</h4>       
+                <!-- Item controls for discipline powers -->
+                <div class="item-controls">
+                    <!-- Icon to display the merit in chat -->
+                    <a class="item-control item-chat" title="{{localize 'WOD20.generic.showtochat'}}"><i
+                        class="fas fa-comment-alt"></i></a>
+                    <!-- Icon to edit the merit-->
+                    <a class="item-control item-edit" title="{{localize 'WOD20.generic.edit'}}"><i
+                            class="fas fa-edit"></i>
+                    </a>
+                    <!-- Icon to delete the merit -->
+                    <a class="item-control item-delete" title="{{localize 'WOD20.generic.delete'}}"><i
+                            class="fas fa-trash"></i></a>
+                </div>
+            </div>
+            <!-- Merit description, expandable by a collapse -->
+            <div class="collapsible-content">
+                <div class="discipline-description">
+                    {{{item.data.description}}}
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ol>
+
+    <div class="pad-top"></div>
+    <label class="resource-label flex-center">{{localize "WOD20.advantages.backgrounds"}}</label>
+    <ol class="items-list">
+        <!-- Header of the boon list -->
+        <li class="item flexrow item-header resource-label">
+            <div class="item-name">{{localize "WOD20.generic.name"}}</div>
+            <div class="item-name header-level">{{localize "WOD20.generic.level"}}</div>
+            <!-- Item controls for adding new boons -->
+            <div class="item-controls">
+                <a class="item-control item-create" title="{{localize 'WOD20.generic.add'}}"
+                    data-type="background"><i class="fas fa-plus"></i> {{localize "WOD20.generic.add"}}
+                </a>
+            </div>
+        </li>
+        <!-- Iterate through each of the boons -->
+        {{#each actor.backgrounds as |item id|}}
+        <li class="item flexcol" data-item-id="{{item._id}}">
+            <div class="flexrow">
+                <div class="item-image">
+                    <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" alt="{{item.name}}" />
+                </div>
+                <!-- Merit name -->
+                <h4 class="item-name collapsible">{{item.name}}</h4>
+                <!-- Merit points -->
+                <div class="resource-value" data-value="{{item.data.points}}" data-name="items.{{item._id}}">
+                    <span class="resource-value-empty"></span>
+                    {{#numLoop 5}}
+                    <span class="resource-value-step" data-index="{{this}}"></span>
+                    {{/numLoop}}
+                </div>     
+                <!-- Item controls for discipline powers -->
+                <div class="item-controls">
+                    <!-- Icon to display the merit in chat -->
+                    <a class="item-control item-chat" title="{{localize 'WOD20.generic.showtochat'}}"><i
+                        class="fas fa-comment-alt"></i></a>
+                    <!-- Icon to edit the merit-->
+                    <a class="item-control item-edit" title="{{localize 'WOD20.generic.edit'}}"><i
+                            class="fas fa-edit"></i>
+                    </a>
+                    <!-- Icon to delete the merit -->
+                    <a class="item-control item-delete" title="{{localize 'WOD20.generic.delete'}}"><i
+                            class="fas fa-trash"></i></a>
+                </div>
+            </div>
+            <!-- Merit description, expandable by a collapse -->
+            <div class="collapsible-content">
+                <div class="discipline-description">
+                    {{{item.data.description}}}
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ol>
+</div>

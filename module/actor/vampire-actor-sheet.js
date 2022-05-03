@@ -14,9 +14,9 @@ export class VampireActorSheet extends GhoulActorSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["vtm5e", "sheet", "actor", "vampire"],
-      template: "systems/wod20/templates/actor/vampire-sheet.html",
+      template: "systems/wod20/templates/actor/vampire-sheet.hbs",
       width: 800,
-      height: 700,
+      height: 900,
       tabs: [
         {
           navSelector: ".sheet-tabs",
@@ -36,7 +36,7 @@ export class VampireActorSheet extends GhoulActorSheet {
   get template() {
     if (!game.user.isGM && this.actor.limited)
       return "systems/wod20/templates/actor/limited-sheet.html";
-    return "systems/wod20/templates/actor/vampire-sheet.html";
+    return "systems/wod20/templates/actor/vampire-sheet.hbs";
   }
 
   /* -------------------------------------------- */
@@ -83,10 +83,11 @@ export class VampireActorSheet extends GhoulActorSheet {
     const dataset = element.dataset;
     const item = this.actor.items.get(dataset.id);
     let disciplineValue = 0;
+    //This is 5th
     // if (item.data.data.discipline === "rituals") {
     //   disciplineValue = this.actor.data.data.disciplines.sorcery.value;
     // } else
-
+    
     if (item.data.data.discipline === "ceremonies") {
       disciplineValue = this.actor.data.data.disciplines.oblivion.value;
     } else {

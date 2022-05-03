@@ -1,34 +1,33 @@
 {
-  "name": "wod20",
-  "title": "Vampire 20th Anniversay Edition",
-  "description": "Vampire 20th system for Foundry VTT!",
-  "version": "1.5",
-  "minimumCoreVersion": "0.9.0",
-  "compatibleCoreVersion": "0.9.0",
-  "templateVersion": 3,
-  "author": "Majid, Mal, Ray Ji",
-  "esmodules": ["module/main.js"],
-  "styles": ["css/vtm5e.css"],
-  "scripts": [],
-  "packs": [],
-  "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json"
-    },
-    {
-      "lang": "fr",
-      "name": "French",
-      "path": "lang/fr.json"
-    }
-  ],
-  "gridDistance": 5,
-  "gridUnits": "ft",
-  "primaryTokenAttribute": "",
-  "secondaryTokenAttribute": "",
-  "url": "https://github.com/Layman2501/wod20",
-  "manifest": "https://raw.githubusercontent.com/Layman2501/wod20/main/system.json",
-  "download": "https://github.com/Layman2501/wod20/archive/refs/heads/main.zip",
-  "license": "LICENSE.txt"
+    "name": "wod20",
+    "title": "Vampire 20th Anniversay Edition",
+    "description": "Vampire 20th system for Foundry VTT!",
+    "version": "1.6",
+    "minimumCoreVersion": "0.9.0",
+    "compatibleCoreVersion": "0.9.0",
+    "templateVersion": 3,
+    "author": "Majid, Mal, Ray Ji",
+    "esmodules": [
+        "module/main.js"
+    ],
+    "styles": [
+        "css/v20.css"
+    ],
+    "scripts": [],
+    "packs": [],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        }
+    ],
+    "gridDistance": 5,
+    "gridUnits": "ft",
+    "primaryTokenAttribute": "",
+    "secondaryTokenAttribute": "",
+    "url": "https://github.com/BinMan86/wod20update",
+    "manifest": "https://github.com/BinMan86/wod20update/system.json",
+    "download": "https://github.com/BinMan86/wod20update/archive/refs/heads/main.zip",
+    "license": "LICENSE.txt"
 }

@@ -115,10 +115,14 @@ Hooks.once("init", async function () {
   });
   Handlebars.registerHelper('le', function( a, b ){
     var next =  arguments[arguments.length-1];
-    console.log(a,b);
-    console.log((a <= b)) 
+    //console.log(a,b);
+    //console.log((a <= b)) 
     return (a <= b) ? next.fn(this) : next.inverse(this);
     
+  });
+  Handlebars.registerHelper('eq2', function( a, b ){
+    var next =  arguments[arguments.length-1];
+    return (a == b) ? next.fn(this) : next.inverse(this);
   });
   Handlebars.registerHelper("setVar", function(varName, varValue, options) {
     options.data.root[varName] = varValue;
@@ -142,6 +146,7 @@ Hooks.once("init", async function () {
   });
 
   // TODO: there exist math helpers for handlebars
+  //This hellper may be incorrect for V20
   Handlebars.registerHelper(
     "frenzy",
     function (willpowerMax, willpowerAgg, willpowerSup, humanity) {
@@ -151,6 +156,7 @@ Hooks.once("init", async function () {
     }
   );
 
+  //This hellper may be incorrect for V20
   Handlebars.registerHelper(
     "willpower",
     function (willpowerMax, willpowerAgg, willpowerSup) {
@@ -159,8 +165,8 @@ Hooks.once("init", async function () {
   );
 
   // TODO: there exist math helpers for handlebars
-  Handlebars.registerHelper("remorse", function (humanity, stain) {
-    return 10 - humanity - stain;
+  Handlebars.registerHelper("remorse", function (humanity) {
+    return 10 - humanity;
   });
 
   Handlebars.registerHelper("numLoop", function (num, options) {
@@ -175,6 +181,7 @@ Hooks.once("init", async function () {
   Handlebars.registerHelper("minus", function (a, b) {
     return a - b;
   });
+  //Used in stats page for columns and null stat
   Handlebars.registerHelper("equal", function (a, b, label) {
     return a == b ? label : "";
   });

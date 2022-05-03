@@ -1,9 +1,9 @@
 <div class="tab disciplines" data-group="primary" data-tab="disciplines">
     <ol class="items-list">
-        <li class="item flexrow item-header">
+        <li class="item flexrow-between item-header resource-label">
             <div class="item-name">{{localize "VTM5E.Name"}}</div>
             <div class="item-name">{{localize "VTM5E.Level"}}</div>
-            <div class="item-controls">
+            <div>
                 <a class="item-control discipline-create" title="{{localize 'VTM5E.Add'}}">
                     <i class="fas fa-plus"></i>
                     {{localize "VTM5E.Add"}}
@@ -12,7 +12,7 @@
         </li>
         {{#each data.data.disciplines as |discipline key|}}
         {{#if discipline.visible}}
-        <li class="flexrow item-header">
+        <li class="flexrow-between item-header resource-label">
             {{#if (and (ne key "rituals") (ne key "ceremonies"))}}
             <div class="item-name vrollable" data-roll="{{discipline.value}}" data-label="{{key}}">{{localize
                 discipline.name}}</div>
@@ -37,7 +37,7 @@
         <li class="item flexcol" data-item-id="{{item._id}}">
             <div class="flexrow">
                 {{#if item.data.rollable}}
-                <div class="item-image power-rollable" data-id="{{item._id}}" data-use-hunger="1"><img src="{{item.img}}"
+                <div class="item-image power-rollable" data-id="{{item._id}}"><img src="{{item.img}}"
                         title="{{item.name}}" width="24" height="24" alt="{{item.name}}" /></div>
                 {{else}}
                 <div class="item-image" data-id="{{item._id}}"><img src="{{item.img}}" title="{{item.name}}"

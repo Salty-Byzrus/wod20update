@@ -9,7 +9,7 @@ export class VampireItemSheet extends ItemSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["vtm5e", "sheet", "item"],
-      width: 520,
+      width: 640,
       height: 480,
       tabs: [
         {

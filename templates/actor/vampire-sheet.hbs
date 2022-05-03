@@ -1,0 +1,61 @@
+<form class="{{cssClass}} flexcol {{#if locked}}locked{{/if}} vampire-sheet" autocomplete="off"
+>
+    {{!-- Vampire Sheet Header --}}
+    <header class="header-section">
+        <header class="header-section-2col">
+            {{> "systems/wod20/templates/actor/parts/profile-img.html"}}
+            <div class="flex-group-center">
+                <div class="grid grid-3col flex-left">
+                    <div>
+                        <label>{{localize "WOD20.name"}}</label>
+                        <input type="text" name="name" value="{{actor.name}}" />
+                    </div>
+                    <div>
+                        <label>{{localize "WOD20.generation"}}</label>
+                        <input type="text" name="data.headers.generation" value="{{data.data.headers.generation}}" />
+                    </div>
+                    <div>
+                        <label>{{localize "WOD20.clan"}}</label>
+                        <input type="text" name="data.clan.value" value="{{data.data.clan.value}}" />
+                    </div>
+                </div>
+
+                <div class="grid-container">
+                    <div class="item1">{{>"systems/wod20/templates/actor/parts/health.hbs"}}</div>
+                    <div class="item2">{{>"systems/wod20/templates/actor/parts/humanity.html"}}</div>
+                    <div class="item3">{{>"systems/wod20/templates/actor/parts/willpower.html"}}</div>
+                    <div class="item4">{{>"systems/wod20/templates/actor/parts/bloodpool.html"}}</div>
+                    <div class="item5">{{>"systems/wod20/templates/actor/parts/exp.html"}}</div>
+                </div> 
+            </div>
+        </header>
+    </header>
+
+    {{!-- Vampire Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="stats">{{localize "WOD20.tabs.stats"}}</a>
+        <a class="item" data-tab="disciplines">{{localize "WOD20.tabs.disciplines"}}</a>
+        <a class="item" data-tab="features">{{localize "WOD20.tabs.advantages"}}</a>
+
+        <a class="item" data-tab="biography">{{localize "WOD20.tabs.biography"}}</a>
+        <a class="item" data-tab="combat">{{localize "WOD20.tabs.combat"}}</a>
+        <a class="item" data-tab="other">{{localize "WOD20.tabs.other"}}</a>
+    </nav>
+    
+    {{!-- Vampire Sheet Body --}}
+    <section class="sheet-body">
+        <div class="pad-top"></div>
+        {{!-- Stats Tab --}} 
+        {{>"systems/wod20/templates/actor/parts/stats.hbs"}} 
+        {{!-- Owned Powers Tab --}} 
+        {{> "systems/wod20/templates/actor/parts/disciplines.hbs"}}
+        {{!-- Owned Features Tab --}} 
+        {{>"systems/wod20/templates/actor/parts/advantages.hbs"}} 
+        {{!-- Biography Tab --}} 
+        {{> "systems/wod20/templates/actor/parts/biography.hbs"}}
+        {{! -- Combat --}} 
+        {{> "systems/wod20/templates/actor/parts/combat.html"}}
+        {{!-- Other Tab --}} 
+        {{> "systems/wod20/templates/actor/parts/other.hbs"}}
+    </section>
+</form>

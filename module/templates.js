@@ -8,18 +8,18 @@ export const preloadHandlebarsTemplates = async function () {
   // Define template paths to load
   const templatePaths = [
     // Actor Sheet Partials
-    "systems/wod20/templates/actor/parts/biography.html",
-    "systems/wod20/templates/actor/parts/disciplines.html",
+    "systems/wod20/templates/actor/parts/biography.hbs",
+    "systems/wod20/templates/actor/parts/disciplines.hbs",
     "systems/wod20/templates/actor/parts/exp.html",
-    "systems/wod20/templates/actor/parts/features.html",
+    "systems/wod20/templates/actor/parts/advantages.hbs",
     "systems/wod20/templates/actor/parts/frenzy.html",
-    "systems/wod20/templates/actor/parts/health.html",
+    "systems/wod20/templates/actor/parts/health.hbs",
     "systems/wod20/templates/actor/parts/humanity.html",
     "systems/wod20/templates/actor/parts/bloodpool.html",
     "systems/wod20/templates/actor/parts/profile-img.html",
-    "systems/wod20/templates/actor/parts/other.html",
+    "systems/wod20/templates/actor/parts/other.hbs",
     "systems/wod20/templates/actor/parts/rotschreck.html",
-    "systems/wod20/templates/actor/parts/stats.html",
+    "systems/wod20/templates/actor/parts/stats.hbs",
     "systems/wod20/templates/actor/parts/willpower.html",
     "systems/wod20/templates/actor/parts/combat.html",
 

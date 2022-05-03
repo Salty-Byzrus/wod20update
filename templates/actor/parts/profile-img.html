@@ -1,6 +1,6 @@
-<div class="profile-img-zone">
-    <h1>{{ sheetType }}</h1>
-    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" width="100"
+<div class="profile-img-zone flex-group-center">
+    <div class ="heading">{{ sheetType }}</div>
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" width="250"
         alt="Profile Image" />
     <button class="lock-btn">
         {{#if locked}}
@@ -8,5 +8,11 @@
         {{ else }}
         <i class="fa fa-lock-open"></i>
         {{/if}}
-    </button>    
+    </button>
+    <div class="button-section">
+        <button class="vrollable" type="text" name="frenzy" data-roll="{{data.data.virtues.selfControl.value }}" data-name="frenzy" data-noability="true"  data-label="{{localize 'VTM5E.ResistingFrenzy'}}" >
+        {{localize "WOD20.profileimage.frenzy"}}</button>
+        <button class="vrollable" type="text" name="rötschreck" data-roll="{{data.data.virtues.courage.value}}" data-name="rotschreck" data-noability="true" data-label="{{localize 'VTM5E.ResistingRötschreck'}}" >
+        {{localize "WOD20.profileimage.rötschreck"}}</button>
+    </div>
 </div> 

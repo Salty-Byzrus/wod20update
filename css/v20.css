@@ -1,0 +1,995 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;800&family=Roboto:wght@300;400;500&display=swap");
+
+/* Fonts */
+@font-face {
+  font-family: "cormorantLight";
+  src: url("../assets/fonts/Cormorant-Light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+form {
+    
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+/* Global styles */
+.window-app {
+  font-family: "Roboto", sans-serif;
+  
+}
+.rollable:hover,
+.rollable:focus,
+.vrollable:hover,
+.vrollable:focus,
+.power-rollable:hover,
+.power-rollable:focus {
+  color: #000;
+  text-shadow: 0 0 10px red;
+  cursor: pointer;
+}
+
+.custom-rollable:hover,
+.custom-rollable:focus {
+  color: #000;
+  text-shadow: 0 0 10px red;
+  cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    grid-column: span 2 / span 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 5px 0;
+    padding: 0;
+}
+.grid-1col {
+    display: grid;
+    grid-column: span 1 / span 1;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+}
+.grid-2col {
+    display: grid;
+    grid-column: span 2 / span 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+}
+.grid-3col {
+    display: grid;
+    grid-column: span 3 / span 3;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-4col {
+    display: grid;
+    grid-column: span 4 / span 4;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: 10px;
+}
+.grid-5col {
+    grid-column: span 5 / span 5;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.grid-6col {
+    display: grid;
+    grid-column: span 6 / span 6;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.grid-7col {
+  grid-column: span 7 / span 7;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+.grid-8col {
+  grid-column: span 8 / span 8;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+.grid-9col {
+  grid-column: span 9 / span 9;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+.grid-10col {
+  grid-column: span 10 / span 10;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+.grid-11col {
+  grid-column: span 11 / span 11;
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+}
+.grid-12col {
+  grid-column: span 12 / span 12;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.flex-group-center,
+.flex-group-left,
+.flex-group-right {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #790813;
+  border-radius: 5px;
+  align-self: stretch;
+  margin-bottom: 5px;
+}
+
+.flex-group-left {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: left;
+  border: none;
+}
+
+.flex-group-right {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.flex-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.flex-left {
+  -webkit-box-align: left;
+  -ms-flex-align: left;
+  align-items: left;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  text-align: left;
+}
+.flex-right {
+  -webkit-box-align: right;
+  -ms-flex-align: right;
+  align-items: right;
+  -webkit-box-pack: right;
+  -ms-flex-pack: right;
+  justify-content: right;
+  text-align: right;
+}
+
+.flex-center-text-left {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.flex-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  align-items: space-between;
+}
+.flexrow-around {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.flexrow-between {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.flexrow-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flexrow-evenly {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.flexrow-around {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.gap-columns-5{
+    gap: 5%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+.dots-right {
+  -webkit-box-align: right;
+  -ms-flex-align: right;
+  align-items: right;
+  -webkit-box-pack: right;
+  -ms-flex-pack: right;
+  justify-content: right;
+  text-align: right;
+  justify-items: left;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.flex-1{
+    flex:1;
+}
+/* New Styles */
+.vtm5e {
+
+}
+
+
+.vtm5e .window-content {
+  background: #ffffff;
+  font-family: "cormorantLight", sans-serif;
+  font-weight: 600;
+}
+
+.vtm5e .profile-img,
+.vtm5e .item-image img {
+  background: #790813;
+}
+
+/*Input Boxes*/
+.vtm5e input {
+  font-family: initial;
+  background: white;
+  border: 1px solid #000000;
+  text-align: center;
+}
+
+.vtm5e button.rollable {
+  background: #790813;
+  color: white;
+  font-family: "cormorantlight", sans-serif;
+  font-weight: bold;
+  border: none;
+}
+
+.vtm5e .resource-heading{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.vtm5e .characteristics-label {
+  font-weight: bold;
+  justify-content: center;
+  font-size: 14px
+}
+
+/*Text Heading*/
+.vtm5e .window-content .resource-label {
+  text-transform: initial;
+  font-size: 18px;
+}
+.pad-bottom {
+    padding-bottom: 5px;
+}
+.pad-top {
+    padding-top: 5px;
+}
+.pad-20{
+    padding-top: 20px;
+}
+.align-adjust-left{
+    margin-left: 10px;
+}
+/*Text Heading for header fields*/
+
+/*Attribute labels eg. Strength, Alertness, Animal Ken etc. etc.*/
+.stat-label {
+  font-weight: bold;
+  font-size: 16px;
+  /*padding-top: 2px; /*hacky fix to text not being inline with dots*/
+}
+
+
+.vtm5e .resource .resource-control:hover,
+.vtm5e .resource .resource-control:focus {
+  color: #000;
+  text-shadow: 0 0 10px red;
+  cursor: pointer;
+}
+
+/* Neither abilities nor attirbutes section have a border */
+.vtm5e .window-content .abilities,
+.vtm5e .window-content .attributes,
+.vtm5e.sheet.actor .window-content .skills {
+  border: none;
+}
+
+.vtm5e .window-content .sheet-body .tab > .resource-label {
+  color: #790813;
+  border-bottom: 1px solid #790813;
+  width: 100%;
+  display: block;
+  text-transform: uppercase;
+}
+
+/* Styles limited to vtm5e sheets */
+
+
+
+/*Fix the height of the header section*/
+.vtm5e .header-section{
+    display: flex;
+    flex:0 0 250px;
+    
+}
+/*Layout of header section*/
+.vtm5e .header-section-2col {
+    display: grid;
+    grid-column: span 2 / span 2;
+    grid-template-columns: 200px auto;
+    gap: 5px;
+    margin: 0px 0;
+    padding: 0;
+    height:100%;
+    max-width:100%;
+    flex:1;
+}
+.vtm5e .header-section-2col label {
+    display: block;
+    padding-bottom: 3px;
+    text-transform: initial;
+    font-size: 16px;
+    font-weight: bold;
+    color: #790813;
+}
+.vtm5e .header-section-2col input {
+    width: 100%;
+    height: 30px;
+    margin: 20;
+    font-size: 18px;
+    text-align: left;
+}
+.vtm5e .header-section-2col .resource-counter label {
+    color: #000000;
+    /*padding-top: 2px; /*hacky fix to text not being inline with dots*/
+}
+.vtm5e .header-section-2col .grid-container input {
+    width: 100%;
+    height: 30px;
+    margin: 20;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+/*obsolete*/
+.vtm5e .coterie-sheet .sheet-header,
+.vtm5e .mortal-sheet .sheet-header,
+.vtm5e .ghoul-sheet .sheet-header {
+  flex: 0 0 155px;
+}
+
+
+
+/*Area of the Profile image and lock button*/
+.vtm5e .header-section-2col .profile-img-zone {
+    max-width: 200px; /* .profile-img width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 0 0 100%
+}
+/*Lock/unlock button*/
+.vtm5e .header-section-2col .profile-img-zone button {
+    background: #790813;
+    color: white;
+    font-family: "cormorantlight", sans-serif;
+    font-weight: bold;
+    border: 1px solid #000000;
+}
+/*Frenzy and rotschreck buttons*/
+.vtm5e .header-section-2col .button-section {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    margin-top: 5px;
+}
+/*Profile image deatails*/
+.vtm5e .header-section-2col .profile-img {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 200px;
+    flex: 0 0 200px;
+    min-height: 50px;
+    max-height: 200px;
+    height: auto;
+    width: 200px;
+    margin-right: 0;
+    border: 1px solid #000000;
+}
+/*Text above Profileimage*/
+.vtm5e .header-section-2col .profile-img-zone .heading {
+    color: #790813;
+    font-family: "cormorantlight", sans-serif;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+
+/*Layout of boxes in right side of header section*/
+.item1 { grid-area: health; }
+.item2 { grid-area: humanity; }
+.item3 { grid-area: willpower; }
+.item4 { grid-area: bloodpool; }
+.item5 { grid-area: experience; }
+.vtm5e .grid-container {
+    display: grid;
+    grid-template-areas:
+        'health willpower humanity'
+        'health bloodpool experience';
+    gap: 5px;
+    padding: 0;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 4fr 3fr 3fr;
+    height: 80%;
+    max-width:100%
+}
+/*For layout of header box sections, willpower, blod pool etc.*/
+.flex-column {
+    padding: 5px;
+    border: 1px solid #790813;
+    border-radius: 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/*obsolete*/
+.vtm5e .sheet-header input {
+  width: 100%;
+  height: 100%;
+  margin: 20;
+  flex: 0 0 100px;
+  margin-left: 10px;
+}
+
+
+.vtm5e section {
+    overflow-y: scroll;
+}
+/*Covers the tab section ie. bottom half of sheet stuff*/
+.vtm5e .sheet-body,
+.vtm5e .sheet-body .tab{
+  height: 100%;
+  /* min-height: 100px; */
+}
+.vtm5e .sheet-body .tab .editor {
+    height: 100%;
+    min-height: 200px;
+    max-height: 200px;
+    overflow-y: scroll;
+    text-align: left;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color:rgb(230, 230, 230)
+}
+.vtm5e .tox .tox-editor-container {
+  background: rgb(230, 230, 230)
+}
+.vtm5e .tox .tox-edit-area {
+  padding: 0 8px;
+}
+
+
+
+.vtm5e .sheet-tabs {
+    -webkit-box-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+}
+.vtm5e .tabs {
+    height: 40px;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+  }
+.vtm5e .tabs .item {
+    font-size: 18px; 
+    line-height: 40px;
+    font-weight: bold;
+    flex: 1;
+    cursor: pointer;
+}
+.vtm5e .tabs .item.active {
+    text-decoration: underline;
+    text-shadow: none;
+    color: rgb(255, 255, 255);
+}
+.vtm5e .window-content nav.sheet-tabs {
+    color: black;
+    font-size: 8px;
+    margin-bottom: 0px;
+    height: 41px; /*makes no difference if removed*/
+    padding: 0;
+    border-top: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+  }
+.vtm5e .window-content nav.sheet-tabs .item.active {
+    background: #790813;
+    text-decoration: none;
+}
+
+  
+
+
+
+
+
+.vtm5e .items-list {
+  list-style: none;
+  margin: 7px 0;
+  padding: 0;
+  overflow-y: auto;
+}
+
+.vtm5e .items-list .item-header {
+  font-weight: bold;
+  min-height: 30px;
+  line-height: 24px;
+  padding: 3px 0;
+  border-bottom: 1px solid #790813;
+  color: #790813;
+}
+
+.vtm5e .items-list .item-header .header-level {
+    text-align: center;
+}
+.vtm5e .items-list .item {
+  min-height: 30px;
+  line-height: 24px;
+  padding: 3px 0;
+  border-bottom: 1px solid #bbb;
+}
+
+.vtm5e .items-list .item .item-image {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 24px;
+  flex: 0 0 24px;
+  margin-right: 5px;
+}
+
+.vtm5e .items-list .item img {
+  display: block;
+}
+
+.vtm5e .items-list .item-name {
+  margin: 0;
+  font-weight: 600;
+}
+
+.vtm5e .items-list .item-name-header {
+  margin: 0;
+  font-weight: bold;
+}
+
+.vtm5e .items-list .item-controls {
+  text-align: right;
+}
+
+.vtm5e .collapsible:hover,
+.vtm5e .collapsible:focus {
+  color: #000;
+  text-shadow: 0 0 10px red;
+  cursor: pointer;
+}
+
+.vtm5e .collapsible-discipline {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.vtm5e .collapsible-content {
+    padding: 0 6px;
+    margin-left: 16px;
+    margin-right: 16px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-radius: 5px;
+    background-color:rgb(220, 220, 220);
+  }
+
+.vtm5e .discipline-description {
+    width: 100%;
+    resize: none;
+  }
+/* Resource boxes CSS */
+
+/* Stat Dots*/
+.vtm5e .resource-value .resource-value-step {
+  height: 14px;
+  width: 14px;
+  border: 1px solid black;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Fills in dot*/
+.vtm5e .resource-value .resource-value-step.active {
+  background-color: #000000;
+}
+
+.vtm5e .resource-value-static .resource-value-static-step {
+  height: 14px;
+  width: 14px;
+  border: 1px solid black;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.vtm5e .resource-value-static .resource-value-static-step.active {
+  background-color: #790813;
+}
+
+/*delete filled stat dots dot. Needed to remove first fille dot in row*/
+.vtm5e .resource-value .resource-value-empty {
+  height: 14px;
+  width: 14px;
+  border: 1px solid black;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+  background:
+    linear-gradient(
+      45deg,
+      transparent 0%,
+      transparent 43%,
+      black 45%,
+      black 55%,
+      transparent 57%,
+      transparent 100%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 0%,
+      transparent 43%,
+      black 45%,
+      black 55%,
+      transparent 57%,
+      transparent 100%
+    );
+}
+
+.vtm5e .resource-counter{
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap
+}
+
+.vtm5e .resource-counter .resource-counter-step {
+  height: 14px;
+  width: 14px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+
+.vtm5e .resource-counter .label{
+    display: inline-block;
+}
+
+.vtm5e .stat-counter .stat-counter-step {
+  background-color: #790813;
+}
+
+.vtm5e .resource-counter .resource-counter-step[data-state="-"] {
+    background-color: #790813;
+  }
+
+.vtm5e .resource-counter .resource-counter-step[data-state="/"] {
+  background:
+    linear-gradient(
+      135deg,
+      transparent 0%,
+      transparent 43%,
+      black 45%,
+      black 55%,
+      transparent 57%,
+      transparent 100%
+    );
+}
+
+.vtm5e .resource-counter .resource-counter-step[data-state="x"] {
+  background:
+    linear-gradient(
+      45deg,
+      transparent 0%,
+      transparent 43%,
+      black 45%,
+      black 55%,
+      transparent 57%,
+      transparent 100%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 0%,
+      transparent 43%,
+      black 45%,
+      black 55%,
+      transparent 57%,
+      transparent 100%
+    );
+}
+
+/*moves the ability dots down - why???*/
+.vtm5e .flex-group-center:not(.flexrow) .resource-value,
+.vtm5e .flex-group-center:not(.flexrow) .resource-counter {
+  margin-top: 0px;
+}
+
+/*moves the ability dots down - why???*/
+.vtm5e .flex-group-center:not(.flexrow) .resource-value,
+.vtm5e .flex-group-center:not(.flexrow) .resource-counter-health {
+  margin-top: 0px;
+}
+
+/*moves discipline dots down*/
+.vtm5e .tab.disciplines .resource-value {
+  margin-top: 3px;
+}
+
+/* ChatMessage CSS */
+
+.roll-label {
+  font-weight: bold;
+  font-size: 130%;
+}
+
+.roll-label .danger {
+  color: #831515;
+}
+
+.roll-label .success {
+  color: #18520b;
+}
+
+.roll-content {
+  font-size: 120%;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.roll-img {
+  max-width: 80%;
+  margin: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%) !important;
+  border: unset !important;
+
+}
+
+
+/* Not in use for V20??*/
+.roll-img.hunger-dice {
+  background: rgba(255, 230, 230, 0.5);
+  border-color: #790813;
+}
+
+.chat-message .roll-img {
+  max-width: 10%;
+}
+
+.vtm5e .locked .resource-value-empty:not(.hunger-value) {
+  opacity: 0;
+  cursor: default;
+}
+
+.vtm5e .locked .resource-value-step:not(.hunger-value) {
+  cursor: default;
+}
+
+/*Make button invisible when lock is on*/
+.vtm5e .locked .resource-minus {
+    opacity: 0;
+    cursor: default !important;
+}
+ 
+/*Make button invisible when lock is on*/ 
+  .vtm5e .locked .resource-plus {
+    opacity: 0;
+    cursor: default !important;
+}
+
+.willpowerReroll .die {
+  margin-left: 3px;
+}
+
+.willpowerReroll .selected::after {
+  position: absolute;
+  content: 'X';
+  font-size: 24px;
+  color: red;
+  margin-left: -20px;
+  margin-top: -2px;
+}
+
+#sidebar.app {
+  background: rgba(20, 0, 0, 0.9);
+}
+
+
+.border-bottom{
+    padding-top: 5px;
+    border-bottom: 1px solid black;
+
+}
+
+
+.item-sheet .header-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0px 0;
+    padding: 0;
+    align-items: center;
+}
+.item-sheet .header-row .profile-img {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100px;
+    flex: 0 0 100px;
+    height: auto;
+    width: 100px;
+    margin-right: 0;
+    border: 1px solid #000000;
+}
+
+.item-sheet .item-header {
+    vertical-align: baseline;
+    align-items: center;
+}
+.heading {
+    color: #790813;
+    font-family: "cormorantlight", sans-serif;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+/*Body of items*/
+.item-sheet .sheet-body {
+    height: 100%;
+}
+.item-sheet section {
+    overflow-y: scroll;
+}
+.item-sheet input {
+    width:100%;
+    height: 30px;
+    font-size: 20px;
+    text-align: left;
+    vertical-align: top;
+    font-family: initial;
+    background: white;
+    border: 1px solid #000000;
+}
+.item-sheet .description-label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #790813;
+    border-bottom: 1px solid #790813;
+    width: 100%;
+    display: block;
+    text-transform: uppercase;
+}
+.item-sheet .editor {
+    height: 100%;
+    min-height: 200px;
+    max-height: 350px;
+    overflow-y: scroll;
+    text-align: left;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color:rgb(230, 230, 230)
+}
+.item-sheet .tox .tox-editor-container {
+    background: rgb(230, 230, 230)
+}
+.item-sheet .tox .tox-edit-area {
+    padding: 0 8px;
+}
+.align-item-center{
+  align-items: center;
+}
+.items-2-col{
+    display: grid;
+    grid-column: span 2 / span 2;
+    grid-template-columns: max-content 100%;
+    gap: 10px;
+    margin: 5px 0;
+    align-items: center;
+}
+
+.item-sheet .header-section-items{
+    display: flex;
+    flex:0 0 150px;   
+}
+.item-sheet .item-header-section-2col {
+    display: grid;
+    grid-column: span 2 / span 2;
+    grid-template-columns: max-content 100%;
+    gap: 5px;
+    margin: 0px 0;
+    padding: 0;
+    height:100%;
+}
+.item-sheet .item-header-section-2col .profile-img-zone {
+    max-width: 150px; /* .profile-img width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 0 0 100%
+}
+.item-sheet .item-header-section-2col .profile-img{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 140px;
+    flex: 0 0 140px;
+    min-height: 50px;
+    max-height: 140px;
+    height: auto;
+    width: 140px;
+    margin-right: 0;
+    border: 1px solid #000000;
+}
+.item-flex-group {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #790813;
+    border-radius: 5px;
+    align-self: stretch;
+    margin-bottom: 5px;
+  }
+  .vtm5e .grid-container {
+    display: grid;
+    grid-template-areas:
+        'health willpower humanity'
+        'health bloodpool experience';
+    gap: 5px;
+    padding: 0;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 4fr 3fr 3fr;
+    height: 80%;
+    max-width:100%
+}
