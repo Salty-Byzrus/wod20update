@@ -1,0 +1,91 @@
+<div class="tab" data-group="primary" data-tab="biography">
+    {{#if isCharacter}}   
+    <div class="flex-group-center">
+        <div class="resource flexrow grid grid-3col">
+            <div>
+                <label class="resource-label">{{localize "WOD20.bio.player"}}</label>
+                <input type="text" name="data.headers.player" value="{{data.data.headers.player}}" />
+            </div>
+            <div>
+                <label class="resource-label">{{localize "WOD20.bio.nature"}}</label>
+                <input type="text" name="data.headers.nature" value="{{data.data.headers.nature}}" />
+            </div>
+            <div>
+                <label class="resource-label">{{localize "WOD20.bio.concept"}}</label>
+                <input type="text" name="data.headers.concept" value="{{data.data.headers.concept}}" />
+            </div>
+        </div>
+            
+        <div class="resource flexrow grid grid-3col">
+            <div>
+                <label class="resource-label">{{localize "WOD20.bio.chronicle"}}</label>
+                <input type="text" name="data.headers.chronicle" value="{{data.data.headers.chronicle}}" />
+            </div>
+            <div>
+                <label class="resource-label">{{localize "WOD20.bio.demeanor"}}</label>
+                <input type="text" name="data.headers.demeanor" value="{{data.data.headers.demeanor}}" />
+            </div>
+            <div>
+                <label class="resource-label">{{localize "WOD20.bio.sire"}}</label>
+                <input type="text" name="data.headers.sire" value="{{data.data.headers.sire}}" />
+            </div>
+        </div>
+    </div>
+    <div class="flex-group-center">
+        <div class="resource flexrow grid grid-6col">
+            <div>
+                <label class="characteristics-label">{{localize "WOD20.bio.age"}}</label>
+                <input type="text" name="data.headers.age" value="{{data.data.headers.age}}" />
+            </div>
+            <div>
+                <label class="characteristics-label">{{localize "WOD20.bio.apparentage"}}</label>
+                <input type="text" name="data.headers.apparent_age" value="{{data.data.headers.apparent_age}}" />
+            </div>
+            <div>
+                <label class="characteristics-label">{{localize "WOD20.bio.dob"}}</label>
+                <input type="text" name="data.headers.dob" value="{{data.data.headers.dob}}" />
+            </div>
+            <div>
+                <label class="characteristics-label">{{localize "WOD20.bio.rip"}}</label>
+                <input type="text" name="data.headers.rip" value="{{data.data.headers.rip}}" />
+            </div>
+            <div>
+                <label class="characteristics-label">{{localize "WOD20.bio.eyecolour"}}</label>
+                <input type="text" name="data.headers.eyecolour" value="{{data.data.headers.eyecolour}}" />
+            </div>
+            <div>
+                <label class="characteristics-label">{{localize "WOD20.bio.haircolour"}}</label>
+                <input type="text" name="data.headers.haircolour" value="{{data.data.headers.haircolour}}" />
+            </div>
+        </div>
+        <div class="resource flexrow grid grid-6col">
+            <div>
+                <label class="characteristics-label">{{localize "WOD20.bio.race"}}</label>
+                <input type="text" name="data.headers.race" value="{{data.data.headers.race}}" />
+            </div>
+            <div>
+                <label class="characteristics-label">{{localize "WOD20.bio.nationality"}}</label>
+                <input type="text" name="data.headers.nationality" value="{{data.data.headers.nationality}}" />
+            </div>
+            <div>
+                <label class="characteristics-label">{{localize "WOD20.bio.height"}}</label>
+                <input type="text" name="data.headers.height" value="{{data.data.headers.height}}" />
+            </div>
+            <div>
+                <label class="characteristics-label">{{localize "WOD20.bio.weight"}}</label>
+                <input type="text" name="data.headers.weight" value="{{data.data.headers.weight}}" />
+            </div>
+            <div>
+                <label class="characteristics-label">{{localize "WOD20.bio.sex"}}</label>
+                <input type="text" name="data.headers.sex" value="{{data.data.headers.sex}}" />
+            </div>
+        </div>
+    </div>
+    {{/if}}
+    {{#if isCharacter}}   
+    <label class="resource-label flex-center pad-top">{{localize "WOD20.bio.biography"}}</label>
+    {{else}}
+    <label class="resource-label flex-center">{{localize "WOD20.bio.history"}}</label>
+    {{/if}}
+    {{editor content=data.data.biography target="data.biography" button=true owner=owner editable=editable}}
+</div>

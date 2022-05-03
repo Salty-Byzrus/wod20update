@@ -7,15 +7,15 @@
             <div class="flex-group-center">
                 <div class="grid grid-3col flex-left">
                     <div>
-                        <label>{{localize "VTM5E.Name"}}</label>
+                        <label>{{localize "WOD20.name"}}</label>
                         <input type="text" name="name" value="{{actor.name}}" />
                     </div>
                     <div>
-                        <label>{{localize "VTM5E.Generation"}}</label>
+                        <label>{{localize "WOD20.generation"}}</label>
                         <input type="text" name="data.headers.generation" value="{{data.data.headers.generation}}" />
                     </div>
                     <div>
-                        <label>{{localize "VTM5E.Clan"}}</label>
+                        <label>{{localize "WOD20.clan"}}</label>
                         <input type="text" name="data.clan.value" value="{{data.data.clan.value}}" />
                     </div>
                 </div>
@@ -33,29 +33,29 @@
 
     {{!-- Vampire Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="stats">{{localize "VTM5E.Stats"}}</a>
-        <a class="item" data-tab="disciplines">{{localize "VTM5E.Disciplines"}}</a>
-        <a class="item" data-tab="features">{{localize "VTM5E.Features"}}</a>
+        <a class="item" data-tab="stats">{{localize "WOD20.tabs.stats"}}</a>
+        <a class="item" data-tab="disciplines">{{localize "WOD20.tabs.disciplines"}}</a>
+        <a class="item" data-tab="features">{{localize "WOD20.tabs.advantages"}}</a>
 
-        <a class="item" data-tab="description">{{localize "VTM5E.Description"}}</a>
-        <a class="item" data-tab="combat">{{localize "VTM5E.Combat"}}</a>
-        <a class="item" data-tab="other">{{localize "VTM5E.Other"}}</a>
+        <a class="item" data-tab="biography">{{localize "WOD20.tabs.biography"}}</a>
+        <a class="item" data-tab="combat">{{localize "WOD20.tabs.combat"}}</a>
+        <a class="item" data-tab="other">{{localize "WOD20.tabs.other"}}</a>
     </nav>
     
     {{!-- Vampire Sheet Body --}}
     <section class="sheet-body">
         <div class="pad-top"></div>
         {{!-- Stats Tab --}} 
-        {{>"systems/wod20/templates/actor/parts/stats.html"}} 
+        {{>"systems/wod20/templates/actor/parts/stats.hbs"}} 
         {{!-- Owned Powers Tab --}} 
         {{> "systems/wod20/templates/actor/parts/disciplines.hbs"}}
         {{!-- Owned Features Tab --}} 
         {{>"systems/wod20/templates/actor/parts/advantages.hbs"}} 
         {{!-- Biography Tab --}} 
-        {{> "systems/wod20/templates/actor/parts/biography.html"}}
+        {{> "systems/wod20/templates/actor/parts/biography.hbs"}}
         {{! -- Combat --}} 
         {{> "systems/wod20/templates/actor/parts/combat.html"}}
         {{!-- Other Tab --}} 
-        {{> "systems/wod20/templates/actor/parts/other.html"}}
+        {{> "systems/wod20/templates/actor/parts/other.hbs"}}
     </section>
 </form>

@@ -74,6 +74,7 @@ export class MortalActorSheet extends CoterieActorSheet {
     const merits = [];
     const flaws = [];
     const backgrounds = [];
+    const clans = [];
 
     // Iterate through items, allocating to containers
     for (const i of sheetData.items) {
@@ -102,6 +103,10 @@ export class MortalActorSheet extends CoterieActorSheet {
             // Append to custom rolls.
             backgrounds.push(i);
         }
+        else if (i.type === "clan") {
+            // Append to custom rolls.
+            clans.push(i);
+        }
     }
     // Assign and return
     actorData.specialties = specialties;
@@ -110,6 +115,7 @@ export class MortalActorSheet extends CoterieActorSheet {
     actorData.flaws = flaws;
     actorData.merits = merits;
     actorData.backgrounds = backgrounds;
+    actorData.clans = clans;
   }
 
   /* -------------------------------------------- */

@@ -936,7 +936,8 @@
             "customRoll",
             "merit",
             "flaw",
-            "background"
+            "background",
+            "clan"
         ],
         "templates": {
             "base": {
@@ -954,21 +955,18 @@
             "templates": [
                 "base"
             ],
-            "featuretype": "merit",
             "points": 0
         },
         "flaw": {
             "templates": [
                 "base"
             ],
-            "featuretype": "flaw",
             "points": 0
         },
         "background": {
             "templates": [
                 "base"
             ],
-            "featuretype": "background",
             "points": 0
         },
         "power": {
@@ -1001,6 +999,11 @@
             ],
             "dice1": "",
             "dice2": ""
+        },
+        "clan": {
+            "templates": [
+                "base"
+            ]
         }
     }
 }

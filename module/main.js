@@ -120,6 +120,10 @@ Hooks.once("init", async function () {
     return (a <= b) ? next.fn(this) : next.inverse(this);
     
   });
+  Handlebars.registerHelper('eq2', function( a, b ){
+    var next =  arguments[arguments.length-1];
+    return (a == b) ? next.fn(this) : next.inverse(this);
+  });
   Handlebars.registerHelper("setVar", function(varName, varValue, options) {
     options.data.root[varName] = varValue;
   });
@@ -177,6 +181,7 @@ Hooks.once("init", async function () {
   Handlebars.registerHelper("minus", function (a, b) {
     return a - b;
   });
+  //Used in stats page for columns and null stat
   Handlebars.registerHelper("equal", function (a, b, label) {
     return a == b ? label : "";
   });
